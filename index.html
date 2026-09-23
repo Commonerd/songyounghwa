@@ -79,9 +79,9 @@ nav{width:min(calc(100% - 40px),var(--max));min-height:68px;margin:auto;display:
 .external-link:hover{opacity:1}
 
 /* book */
-.book{display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:center}
+.book{display:grid;grid-template-columns:270px 1fr;gap:70px;align-items:center}
 .book-photo-wrap{display:flex;flex-direction:column;gap:11px}
-.book-photo{width:280px;overflow:hidden;background:#deded8;border:1px solid var(--line);box-shadow:14px 14px 0 #deded8}
+.book-photo{width:230px;overflow:hidden;background:#deded8;border:1px solid var(--line);box-shadow:14px 14px 0 #deded8}
 .book-photo img{width:100%;height:auto;object-fit:contain}
 .book-info h3{font-size:31px;font-weight:500;line-height:1.35;letter-spacing:-.035em;margin-bottom:20px}
 .book-info p{color:var(--muted);margin-bottom:17px;max-width:760px}
@@ -128,7 +128,7 @@ footer{padding:34px 0;font-size:13px;line-height:1.5;color:var(--muted)}.footer-
  .research-item{grid-template-columns:45px minmax(0,1fr);gap:15px}
  .research-related{grid-column:2;padding:12px 0 0;border-left:0;border-top:1px solid var(--line);justify-content:flex-start;flex-direction:row;align-items:center}
  .research-related-label{font-size:10px}
- .book{grid-template-columns:1fr;gap:50px}.book-photo{width:220px}
+ .book{grid-template-columns:1fr;gap:42px}.book-photo{width:190px}
  .projects{grid-template-columns:1fr}.cv-box{padding:32px 25px;flex-direction:column;align-items:flex-start}
  .footer-inner{flex-direction:column}
 }
@@ -243,6 +243,25 @@ footer{padding:34px 0;font-size:13px;line-height:1.5;color:var(--muted)}.footer-
 <h3 class="publication-group-title" data-i18n="publication.writingTitle"></h3>
 <div class="publication-list" id="writing">
 <div class="publication"><div class="publication-year" data-i18n="publication.writingYear"></div><div><h3 data-i18n="publication.writing"></h3><p data-i18n="publication.writingMeta"></p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label" data-i18n="book.label"></div>
+<div class="book">
+<div class="book-photo-wrap">
+<div class="book-photo">
+<img src="assets/book-cover.jpg" alt="Book cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+<div class="photo-placeholder" style="display:none" data-i18n="photo.book"></div>
+</div>
+</div>
+<div class="book-info">
+<h3 data-i18n="book.title"></h3>
+<p data-i18n="book.p1"></p>
+<p data-i18n="book.p2"></p>
+</div>
 </div>
 </div>
 </section>
