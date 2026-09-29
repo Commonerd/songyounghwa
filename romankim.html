@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Roman Kim Biography Translation Project — Song Younghwa">
+<meta name="author" content="Song Younghwa">
+<title>송영화 | 『Роман Ким』 번역 프로젝트</title>
+<style>
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --text: #1c1c1c;
+  --muted: #6f6f6a;
+  --line: #deded8;
+  --accent: #263238;
+  --accent-light: #eef0ef;
+  --max: 1120px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans", "Noto Sans KR", "Hiragino Sans", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.72;
+}
+a { color: inherit; text-decoration: none; }
+section { padding: 94px 0; border-bottom: 1px solid var(--line); }
+.container { width: min(calc(100% - 40px), var(--max)); margin: auto; }
+
+/* Header */
+header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+  background: rgba(247, 247, 245, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(222, 222, 216, 0.78);
+}
+nav {
+  width: min(calc(100% - 40px), var(--max));
+  min-height: 68px; margin: auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+}
+.logo { font-size: 14px; font-weight: 700; letter-spacing: .05em; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 22px; }
+.back { font-size: 13px; font-weight: 600; color: var(--muted); transition: color .2s; }
+.back:hover { color: var(--text); }
+.language-switcher { display: flex; gap: 4px; align-items: center; }
+.language-switcher button {
+  border: 0; background: transparent; color: var(--muted);
+  font: inherit; font-size: 11px; padding: 4px 5px; cursor: pointer; border-radius: 3px;
+}
+.language-switcher button.active, .language-switcher button:hover {
+  color: var(--text); background: var(--accent-light); font-weight: 700;
+}
+
+/* Hero */
+.hero { min-height: 75vh; padding-top: 68px; display: flex; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.62fr) minmax(250px, .72fr); gap: 72px; align-items: end; }
+.hero-inner { padding: 78px 0 65px; }
+.hero-kicker { font-size: 12px; color: var(--muted); margin-bottom: 24px; letter-spacing: .055em; text-transform: uppercase; font-weight: 700; }
+.hero h1 { font-size: clamp(40px, 6vw, 76px); font-weight: 500; letter-spacing: -.05em; line-height: 1.05; margin-bottom: 30px; }
+.hero-description { max-width: 820px; font-size: clamp(18px, 2.1vw, 24px); line-height: 1.54; letter-spacing: -.028em; color: #333; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.tag { padding: 7px 10px; background: var(--accent-light); border-radius: 3px; font-size: 11px; color: #4d5355; }
+
+.hero-aside { border-left: 1px solid var(--line); padding-left: 28px; }
+.metric { padding: 0 0 20px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+.metric:last-child { border-bottom: 0; margin-bottom: 0; }
+.metric strong { display: block; font-size: 22px; font-weight: 500; letter-spacing: -.03em; }
+.metric span { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* General Sections */
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 22px; color: var(--text); }
+.section-title { font-size: clamp(28px, 4vw, 42px); font-weight: 500; letter-spacing: -.045em; line-height: 1.15; margin-bottom: 34px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 68px; }
+.prose { font-size: 15px; color: #333; }
+.prose p + p { margin-top: 18px; }
+
+/* Status / Timeline */
+.status-group { margin-top: 20px; }
+.status-title { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.status-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.timeline-list { border-top: 1px solid var(--line); margin-bottom: 50px; }
+.timeline-item { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.timeline-date { font-size: 13px; color: var(--muted); font-weight: 600; }
+.timeline-content h4 { font-size: 17px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 4px; }
+.timeline-content p { font-size: 14px; color: var(--muted); }
+.badge { display: inline-block; padding: 2px 7px; font-size: 10px; font-weight: 700; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+.badge-ongoing { background: #e3f2fd; color: #1565c0; }
+.badge-done { background: var(--accent-light); color: #4d5355; }
+
+/* Resource Links */
+.resource-box { background: var(--surface); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
+.resource-link { display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 600; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.resource-link:last-child { border-bottom: 0; padding-bottom: 0; }
+.resource-link:hover { opacity: .7; }
+
+/* Footer */
+footer { padding: 34px 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+
+@media (max-width: 850px) {
+  .container { width: min(calc(100% - 30px), var(--max)); }
+  section { padding: 60px 0; }
+  .hero-grid, .two-col { grid-template-columns: 1fr; gap: 35px; }
+  .hero-aside { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 25px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+  .footer-inner { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">SONG YOUNGHWA</a>
+    <div class="nav-right">
+      <a class="back" href="index.html#projects" data-i18n="nav.back">← 프로젝트 목록</a>
+      <div class="language-switcher">
+        <button data-lang="ko" onclick="setLanguage('ko')">KO</button>
+        <button data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button data-lang="ja" onclick="setLanguage('ja')">JA</button>
+        <button data-lang="ru" onclick="setLanguage('ru')">RU</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-inner">
+        <div class="hero-kicker" data-i18n="hero.kicker">TRANSLATION · RUSSIAN LITERATURE</div>
+        <h1 data-i18n="hero.title">『Роман Ким』<br>로만 킴 전기 번역 프로젝트</h1>
+        <p class="hero-description" data-i18n="hero.description">
+          알렉산드르 쿨라노프(Александр Куланов)의 로만 킴 전기를 한국어로 번역하고, 신간 자료집 파악 및 출판 가능성을 검토하는 연구·번역 프로젝트입니다.
+        </p>
+        <div class="hero-meta">
+          <span class="tag" data-i18n="tags.1">러시아 고려인</span>
+          <span class="tag" data-i18n="tags.2">추리소설가 · 정보원</span>
+          <span class="tag" data-i18n="tags.3">알렉산드르 쿨라노프</span>
+          <span class="tag" data-i18n="tags.4">번역 · 출판 검토</span>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <div class="metric">
+          <strong data-i18n="metric.1.title">Александр Куланов</strong>
+          <span data-i18n="metric.1.sub">원작 저자 (Aleksandr Kulanov)</span>
+        </div>
+        <div class="metric">
+          <strong data-i18n="metric.2.title">로만 킴 (김기룡)</strong>
+          <span data-i18n="metric.2.sub">1899–1967 · 고려인 작가</span>
+        </div>
+        <div class="metric">
+          <strong data-i18n="metric.3.title">진행 중</strong>
+          <span data-i18n="metric.3.sub">신간 자료집 파악 & 번역·출판 검토</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview">
+    <div class="container">
+      <div class="section-label" data-i18n="overview.label">PROJECT OVERVIEW</div>
+      <h2 class="section-title" data-i18n="overview.title">프로젝트 소개</h2>
+      <div class="two-col">
+        <div class="prose">
+          <p data-i18n="overview.p1">
+            1899년 블라디보스토크에서 태어난 로만 킴(김기룡)은 한국계 가정 출신으로 일본에서 성장하고 동양학을 공부했으며, 일본학자·번역가이자 소련에서 인기를 끈 추리소설 작가로 활동했습니다.
+          </p>
+          <p data-i18n="overview.p2">
+            소련 정보·보안기관과 연관된 경력과 1937년 체포를 포함하여 그의 삶은 복잡하고 다층적인 서사를 지니고 있습니다. 본 프로젝트는 알렉산드르 쿨라노프의 저작을 바탕으로 한국어 독자들에게 그의 삶과 시대적 배경을 소개하는 것을 목표로 합니다.
+          </p>
+        </div>
+        <div>
+          <div class="resource-box">
+            <a class="resource-link" href="https://www.ozon.ru/product/roman-kim-kulanov-aleksandr-evgenevich-828278606/?at=1i2m1SypipD_RVmWHilVWkUgPBcDF7F3&sh=42ikKmsdaA" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="resources.ozon">원서 보기 (Ozon)</span>
+              <span>↗</span>
+            </a>
+            <a class="resource-link" href="https://www.youtube.com/watch?v=dD053poz-mo" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="resources.youtube">관련 방송 영상</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress / Status Section -->
+  <section id="status">
+    <div class="container">
+      <div class="section-label" data-i18n="status.label">TIMELINE & STATUS</div>
+      <h2 class="section-title" data-i18n="status.title">진행 상황</h2>
+
+      <div class="status-group">
+        <div class="status-title" data-i18n="status.ongoing">진행 중 (IN PROGRESS)</div>
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-date">2026.09.20 ~</div>
+            <div class="timeline-content">
+              <h4><span class="badge badge-ongoing">진행</span><span data-i18n="timeline.1.title">로만킴 전문가 상담 및 출판 검토</span></h4>
+              <p data-i18n="timeline.1.desc">로만킴 전문가 상담 진행. 신간자료집 파악, 번역 계획 수립 및 출판 가능성 검토 중.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-title" data-i18n="status.completed">완료 (COMPLETED)</div>
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-date">2026.09.19</div>
+            <div class="timeline-content">
+              <h4><span class="badge badge-done">완료</span><span data-i18n="timeline.2.title">저자 미팅 및 신간 자료집 수령</span></h4>
+              <p data-i18n="timeline.2.desc">알렉산드르 쿨라노프 저자 미팅 수행 및 신간 자료집 수령 완료.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 Song Younghwa</div>
+    <div data-i18n="footer">역사학 · 디지털 인문학</div>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  ko: {
+    nav: { back: "← 프로젝트 목록" },
+    hero: {
+      kicker: "TRANSLATION · RUSSIAN LITERATURE",
+      title: "『Роман Ким』<br>로만 킴 전기 번역 프로젝트",
+      description: "알렉산드르 쿨라노프(Александр Куланов)의 로만 킴 전기를 한국어로 번역하고, 신간 자료집 파악 및 출판 가능성을 검토하는 연구·번역 프로젝트입니다."
+    },
+    tags: { 1: "러시아 고려인", 2: "추리소설가 · 정보원", 3: "알렉산드르 쿨라노프", 4: "번역 · 출판 검토" },
+    metric: {
+      1: { title: "Александр Куланов", sub: "원작 저자 (Aleksandr Kulanov)" },
+      2: { title: "로만 킴 (김기룡)", sub: "1899–1967 · 고려인 작가" },
+      3: { title: "진행 중", sub: "신간 자료집 파악 & 번역·출판 검토" }
+    },
+    overview: {
+      label: "PROJECT OVERVIEW",
+      title: "프로젝트 소개",
+      p1: "1899년 블라디보스토크에서 태어난 로만 킴(김기룡)은 한국계 가정 출신으로 일본에서 성장하고 동양학을 공부했으며, 일본학자·번역가이자 소련에서 인기를 끈 추리소설 작가로 활동했습니다.",
+      p2: "소련 정보·보안기관과 연관된 경력과 1937년 체포를 포함하여 그의 삶은 복잡하고 다층적인 서사를 지니고 있습니다. 본 프로젝트는 알렉산드르 쿨라노프의 저작을 바탕으로 한국어 독자들에게 그의 삶과 시대적 배경을 소개하는 것을 목표로 합니다."
+    },
+    resources: { ozon: "원서 보기 (Ozon)", youtube: "관련 방송 영상" },
+    status: { label: "TIMELINE & STATUS", title: "진행 상황", ongoing: "진행 중 (IN PROGRESS)", completed: "완료 (COMPLETED)" },
+    timeline: {
+      1: { title: "로만킴 전문가 상담 및 출판 검토", desc: "로만킴 전문가 상담 진행. 신간자료집 파악, 번역 계획 수립 및 출판 가능성 검토 중." },
+      2: { title: "저자 미팅 및 신간 자료집 수령", desc: "알렉산드르 쿨라노프 저자 미팅 수행 및 신간 자료집 수령 완료." }
+    },
+    footer: "역사학 · 디지털 인문학"
+  },
+  en: {
+    nav: { back: "← Back to Projects" },
+    hero: {
+      kicker: "TRANSLATION · RUSSIAN LITERATURE",
+      title: "『Роман Ким』<br>Roman Kim Biography Project",
+      description: "A research and translation project dedicated to translating Aleksandr Kulanov's biography of Roman Kim into Korean, examining new source collections, and evaluating publication prospects."
+    },
+    tags: { 1: "Koryo-saram", 2: "Spy Fiction Writer", 3: "Aleksandr Kulanov", 4: "Translation & Publishing" },
+    metric: {
+      1: { title: "Александр Куланов", sub: "Original Author" },
+      2: { title: "Roman Kim", sub: "1899–1967 · Writer" },
+      3: { title: "In Progress", sub: "Reviewing Sources & Publishing Plan" }
+    },
+    overview: {
+      label: "PROJECT OVERVIEW",
+      title: "Project Overview",
+      p1: "Born in Vladivostok in 1899, Roman Kim grew up in Japan, studied Oriental studies, and became a prominent Japanologist, translator, and popular detective fiction writer in the Soviet Union.",
+      p2: "His life involved complex ties with Soviet intelligence services and his arrest in 1937. This project aims to introduce his biography and historical context to Korean readers."
+    },
+    resources: { ozon: "View Book (Ozon)", youtube: "Related Broadcast" },
+    status: { label: "TIMELINE & STATUS", title: "Progress & Status", ongoing: "IN PROGRESS", completed: "COMPLETED" },
+    timeline: {
+      1: { title: "Expert Consultation & Publishing Review", desc: "Consulting with Roman Kim experts, examining new source materials, planning translation, and evaluating publication possibilities." },
+      2: { title: "Author Meeting & Book Materials Received", desc: "Met with author Aleksandr Kulanov and received new source collection." }
+    },
+    footer: "Historian · Digital Humanities"
+  },
+  ja: {
+    nav: { back: "← プロジェクト一覧へ" },
+    hero: {
+      kicker: "TRANSLATION · RUSSIAN LITERATURE",
+      title: "『Роман Ким』<br>ロマン・キム伝記 翻訳プロジェクト",
+      description: "アレクサンドル・クラノフによるロマン・キムの伝記を韓国語に翻訳し、新刊資料集の hydro と出版の可能性を検討するプロジェクトです。"
+    },
+    tags: { 1: "高麗人", 2: "推理小説家", 3: "アレクサンドル・クラノフ", 4: "翻訳・出版検討" },
+    metric: {
+      1: { title: "Александр Куланов", sub: "原著者 (Aleksandr Kulanov)" },
+      2: { title: "ロマン・キム", sub: "1899–1967 · 作家" },
+      3: { title: "進行中", sub: "資料集の hara と出版検討" }
+    },
+    overview: {
+      label: "PROJECT OVERVIEW",
+      title: "プロジェクト紹介",
+      p1: "1899年ウラジオストク生まれのロマン・キムは、日本で成長して東洋学を学び、日本研究者・翻訳者・人気スパイ小説作家として活躍しました。",
+      p2: "ソ連保安機関との複雑な関係や1937年の逮捕など、彼の生涯は多層的な物語を帯びています。本プロジェクトは韓国の読者に彼の生涯と時代背景を紹介することを objective としています。"
+    },
+    resources: { ozon: "原書を見る (Ozon)", youtube: "関連番組" },
+    status: { label: "TIMELINE & STATUS", title: "進行状況", ongoing: "進行中 (IN PROGRESS)", completed: "完了 (COMPLETED)" },
+    timeline: {
+      1: { title: "専門家相談および出版検討", desc: "ロマン・キム専門家との相談、新刊資料集の把握、翻訳計画の策定および出版可能性の検討中。" },
+      2: { title: "著者ミーティングおよび資料集受령", desc: "アレクサンドル・クラノフ著者とのミーティング実施および新刊資料集の受領完了。" }
+    },
+    footer: "歴史学 · デジタル・ヒューマニティーズ"
+  },
+  ru: {
+    nav: { back: "← К список проектов" },
+    hero: {
+      kicker: "TRANSLATION · RUSSIAN LITERATURE",
+      title: "『Роман Ким』<br>Проект перевода биографии Романа Кима",
+      description: "Проект перевода биографии Романа Кима Александра Куланова на корейский язык, изучения новых материалов и оценки перспектив издания."
+    },
+    tags: { 1: "Корё-сарам", 2: "Писатель · Разведчик", 3: "Александр Куланов", 4: "Перевод и издание" },
+    metric: {
+      1: { title: "Александр Куланов", sub: "Автор книги" },
+      2: { title: "Роман Ким", sub: "1899–1967 · Писатель" },
+      3: { title: "В процессе", sub: "Изучение материалов и подготовка" }
+    },
+    overview: {
+      label: "PROJECT OVERVIEW",
+      title: "О проекте",
+      p1: "Роман Ким (Ким Ги Рён), родившийся во Владивостоке в 1899 году, вырос в Японии, стал известным японоведом, переводчиком и популярным автором детективных произведений в СССР.",
+      p2: "Его жизнь была связана с советскими органами безопасности и арестом в 1937 году. Проект призван познакомить корейских читателей с его биографией."
+    },
+    resources: { ozon: "Страница книги (Ozon)", youtube: "Связанная телепередача" },
+    status: { label: "TIMELINE & STATUS", title: "Статус проекта", ongoing: "В ПРОЦЕССЕ", completed: "ЗАВЕРШЕНО" },
+    timeline: {
+      1: { title: "Консультация с экспертами и оценка издания", desc: "Консультации с экспертами по Роману Киму, анализ новых материалов, планирование перевода." },
+      2: { title: "Встреча с автором и получение материалов", desc: "Встреча с Александром Кулановым и получение нового сборника материалов." }
+    },
+    footer: "История · Цифровые гуманитарные науки"
+  }
+};
+
+let currentLanguage = "ko";
+function getValue(obj, path) { return path.split(".").reduce((c, k) => c ? c[k] : undefined, obj); }
+function setLanguage(language, save = true) {
+  if (!translations[language]) language = "ko";
+  currentLanguage = language;
+  document.documentElement.lang = language;
+  const dict = translations[language];
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const value = getValue(dict, el.getAttribute("data-i18n"));
+    if (value !== undefined) el.innerHTML = value;
+  });
+  document.querySelectorAll(".language-switcher button").forEach(b => b.classList.toggle("active", b.dataset.lang === language));
+  if (save) localStorage.setItem("preferredLanguage", language);
+}
+function initializeLanguage() {
+  const saved = localStorage.getItem("preferredLanguage");
+  if (saved && translations[saved]) return setLanguage(saved, false);
+  const b = (navigator.language || "ko").toLowerCase();
+  const lang = b.startsWith("ja") ? "ja" : b.startsWith("ru") ? "ru" : b.startsWith("en") ? "en" : "ko";
+  setLanguage(lang, false);
+}
+document.addEventListener("DOMContentLoaded", initializeLanguage);
+</script>
+</body>
+</html>
