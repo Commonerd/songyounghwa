@@ -234,10 +234,11 @@ footer{padding:34px 0;font-size:13px;line-height:1.5;color:var(--muted)}.footer-
 <div class="publication"><div class="publication-year" data-i18n="publication.writingYear"></div><div><h3 data-i18n="publication.writing3"></h3><p data-i18n="publication.writing3Meta"></p></div></div>
 </div>
 
-<!-- 2. 심사 중인 공동 집필 원고 -->
+<!-- 2. 심사 중인 원고 -->
 <h3 class="publication-group-title" data-i18n="publication.manuscriptTitle"></h3>
 <div class="publication-list" id="manuscript">
 <div class="publication"><div class="publication-year">2026.07</div><div><h3 data-i18n="publication.manuscript"></h3><p data-i18n="publication.manuscriptMeta"></p></div></div>
+<div class="publication"><div class="publication-year">2026.10</div><div><h3 data-i18n="publication.manuscript2"></h3><p data-i18n="publication.manuscript2Meta"></p></div></div>
 </div>
 
 <!-- 3. 논문 (최신순 정렬) -->
@@ -462,6 +463,18 @@ translations.ko.publication.writing3Meta="논문 · 집필 중 · 공저자: Woo
 translations.en.publication.writing3Meta="Article · In preparation · Co-author: Woo, Donghyun";
 translations.ja.publication.writing3Meta="論文 · 執筆中 · 共著者: Woo, Donghyun";
 translations.ru.publication.writing3Meta="Статья · В процессе написания · Соавтор: Woo, Donghyun";
+translations.ko.publication.manuscriptTitle="심사 중 · 발간 대기 원고";
+translations.en.publication.manuscriptTitle="Manuscripts Under Review · Awaiting Publication";
+translations.ja.publication.manuscriptTitle="審査中・刊行待ちの原稿";
+translations.ru.publication.manuscriptTitle="Рукописи на рецензировании и в ожидании публикации";
+translations.ko.publication.manuscript2="통제를 넘어, 지속 가능한 위임으로 - 도쿄 DiHuCo 허브 심포지엄 2026 참관기 -";
+translations.en.publication.manuscript2=translations.ko.publication.manuscript2;
+translations.ja.publication.manuscript2=translations.ko.publication.manuscript2;
+translations.ru.publication.manuscript2=translations.ko.publication.manuscript2;
+translations.ko.publication.manuscript2Meta="『디지털인문학』 · 게재 승인 · 발간 대기 중 · 단독 연구";
+translations.en.publication.manuscript2Meta="Accepted for publication in 『디지털인문학』 · Awaiting publication · Sole-authored";
+translations.ja.publication.manuscript2Meta="『디지털인문학』 · 掲載承認 · 刊行待ち · 単著";
+translations.ru.publication.manuscript2Meta="Принята к публикации в 『디지털인문학』 · Ожидает выхода · Индивидуальное исследование";
 
 let currentLanguage="ko";
 function getValue(obj,path){return path.split(".").reduce((c,k)=>c?c[k]:undefined,obj)}
