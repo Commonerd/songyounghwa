@@ -125,6 +125,7 @@
   /* ---------------- state ---------------- */
   var bySid = {};          // sid -> [rows in time order]
   var loadState = 'loading';
+  var loadErr = '';
   var filter = 'all';
   var openSid = null;
 
@@ -256,12 +257,15 @@
       '<i style="width:' + w('changed') + ';background:var(--s4,#eda100)"></i>' +
       '<i style="width:' + w('revise') + ';background:var(--s2,#eb6834)"></i></span>';
     if (lastToggle !== html) { lastToggle = html; toggle.innerHTML = html; }
+    var tt = loadState === 'fail' ? t('loadFail') + ' — ' + loadErr : '';
+    if (toggle.title !== tt) toggle.title = tt;
     if (!menu.hidden) {
       if (menuLang !== lang()) renderMenu();
       else { var p = menu.querySelector('.rv-prog'); if (p) p.textContent = progText(); }
     }
   }
   function progText() {
+    if (loadState === 'fail') return t('loadFail') + ' — ' + loadErr;
     var c = lastCnt || { verified: 0, revise: 0 };
     return t('progress', { n: lastN, v: c.verified, r: c.revise });
   }
@@ -393,7 +397,8 @@
         .catch(function (err) {
           saveBtn.disabled = false;
           saveBtn.textContent = t('save');
-          msg.textContent = t('fail') + ' (' + err.message + ')';
+          if (window.console) console.error('[review] save failed:', err);
+          msg.textContent = t('fail') + ' (' + ((err && err.message) || err) + ')';
         });
     };
   }
@@ -401,15 +406,24 @@
   /* ---------------- load ---------------- */
   function load() {
     fetch(ENDPOINT + '?report=' + encodeURIComponent(REPORT))
-      .then(function (res) { return res.json(); })
-      .then(function (j) {
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.text();
+      })
+      .then(function (txt) {
+        var j;
+        try { j = JSON.parse(txt); } catch (e) { throw new Error('not JSON: ' + txt.slice(0, 80)); }
         if (!j || !j.ok) throw new Error('bad response');
         bySid = {};
         j.rows.forEach(addRow);
         loadState = 'ok';
         decorate();
       })
-      .catch(function () { loadState = 'fail'; decorate(); });
+      .catch(function (err) {
+        loadErr = (err && err.message) || String(err);
+        if (window.console) console.error('[review] load failed:', err);
+        loadState = 'fail'; decorate();
+      });
   }
 
   var IGNORE = '#rv-dock,#rv-panel,#tip,#toast';
