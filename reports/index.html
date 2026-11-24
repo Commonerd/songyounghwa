@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Song Younghwa — AI Research Reports">
+<meta name="author" content="Song Younghwa">
+<title>AI 리서치 보고서 | 송영화</title>
+<style>
+:root{--bg:#f7f7f5;--surface:#fff;--text:#1c1c1c;--muted:#6f6f6a;--line:#deded8;--accent:#263238;--accent-light:#eef0ef;--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Noto Sans","Noto Sans KR",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.72}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(247,247,245,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(222,222,216,.78)}
+nav{width:min(calc(100% - 40px),var(--max));min-height:68px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:14px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.nav-right{display:flex;align-items:center;gap:26px}
+.back{font-size:14px;font-weight:600;white-space:nowrap}.back:hover{opacity:.7}
+.language-switcher{display:flex;gap:4px}
+.language-switcher button{border:0;background:transparent;padding:5px 6px;font-size:10px;color:var(--muted);cursor:pointer;border-radius:3px}
+.language-switcher button:hover,.language-switcher button.active{color:var(--text);background:var(--accent-light)}
+main{padding:150px 0 100px}
+.section-label{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:25px;line-height:1.35}
+h1{font-size:clamp(36px,6vw,60px);font-weight:500;letter-spacing:-.045em;line-height:1.08;margin-bottom:28px}
+.intro{color:var(--muted);font-size:15px;max-width:800px;margin-bottom:14px}
+.count{font-size:13px;color:var(--muted);margin-bottom:40px}
+.list{border-top:1px solid var(--line)}
+.report{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:30px;align-items:start;padding:30px 0;border-bottom:1px solid var(--line)}
+.date{color:var(--muted);font-size:13px;padding-top:4px}
+.report h2{font-size:23px;font-weight:500;letter-spacing:-.025em;line-height:1.35;margin-bottom:8px}
+.report h2 a:hover{text-decoration:underline;text-underline-offset:4px}
+.report .summary{color:var(--text);font-size:15px;max-width:780px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:5px 10px;background:var(--accent-light);border-radius:3px;font-size:11px;color:#4d5355}
+.open{display:inline-block;margin-top:4px;padding:10px 15px;border:1px solid var(--text);font-size:12px;font-weight:600;white-space:nowrap}
+.open:hover{background:var(--text);color:var(--bg)}
+.note{margin-top:46px;font-size:13px;color:var(--muted);max-width:800px}
+footer{padding:34px 0;font-size:13px;line-height:1.5;color:var(--muted);border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){
+ .container{width:min(calc(100% - 30px),var(--max))}
+ main{padding:120px 0 72px}
+ .report{grid-template-columns:1fr;gap:6px}
+ .open{margin-top:10px}
+ .footer-inner{flex-direction:column}
+}
+@media(max-width:420px){.back{font-size:12px}.nav-right{gap:10px}}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<a class="logo" href="../">SONG YOUNGHWA</a>
+<div class="nav-right">
+<a class="back" href="../#ai-reports" data-i18n="back"></a>
+<div class="language-switcher">
+<button data-lang="ko" onclick="setLanguage('ko')">KO</button>
+<button data-lang="en" onclick="setLanguage('en')">EN</button>
+<button data-lang="ja" onclick="setLanguage('ja')">JA</button>
+<button data-lang="ru" onclick="setLanguage('ru')">RU</button>
+</div>
+</div>
+</nav>
+</header>
+
+<main>
+<div class="container">
+<div class="section-label" data-i18n="label"></div>
+<h1 data-i18n="title"></h1>
+<p class="intro" data-i18n="intro"></p>
+<p class="count" id="count"></p>
+<div class="list" id="list"></div>
+<p class="note" data-i18n="note"></p>
+</div>
+</main>
+
+<footer><div class="container footer-inner"><div>© 2026 Song Younghwa</div><div data-i18n="footer"></div></div></footer>
+
+<script>
+/* 새 보고서: reports/ 폴더에 HTML을 넣고 아래 REPORTS 맨 위에 항목 하나 추가 (최신순). */
+const REPORTS=[
+ {file:"ai-robots-abundance-2035.html",date:"2026.11.24",
+  title:{ko:"AI·로봇과 풍요의 미래 — 머스크의 20년 전망 검증",en:"AI, Robots and the Promise of Abundance — Testing Musk's 20-Year Outlook",ja:"AI・ロボットと豊かさの未来 — マスクの20年展望を検証",ru:"ИИ, роботы и обещание изобилия — проверка 20-летнего прогноза Маска"},
+  summary:{ko:"AI와 로봇은 지능과 정형 작업의 단가를 낮추지만, 2035년까지 노후 저축이 무의미해질 만큼의 풍요는 기본 시나리오가 아니다.",en:"AI and robots cut the cost of intelligence and routine work, but abundance that makes retirement saving pointless by 2035 is not the baseline.",ja:"AIとロボットは知能と定型作業の単価を下げるが、2035年までに老後の貯蓄が無意味になるほどの豊かさは基本シナリオではない。",ru:"ИИ и роботы удешевляют интеллектуальный и рутинный труд, но изобилие, при котором к 2035 году пенсионные накопления теряют смысл, — не базовый сценарий."},
+  tags:{ko:["AI·로봇","생산성","수술 로봇","노동시장","노후 저축","2035 시나리오"],en:["AI & robots","Productivity","Surgical robots","Labour market","Retirement saving","2035 scenarios"],ja:["AI・ロボット","生産性","手術ロボット","労働市場","老後の貯蓄","2035年シナリオ"],ru:["ИИ и роботы","Производительность","Хирургические роботы","Рынок труда","Пенсионные накопления","Сценарии 2035"]}},
+ {file:"ai-university-shadow-education-2026.html",date:"2026.11.22",
+  title:{ko:"AI 시대 세계 대학과 사교육의 현재와 미래 — 심층 리포트",en:"Universities and Shadow Education Worldwide in the Age of AI — An In-Depth Report",ja:"AI時代における世界の大学と私教育の現在と未来 — 深層レポート",ru:"Университеты и частное репетиторство в мире в эпоху ИИ — аналитический доклад"},
+  summary:{ko:"AI는 대학과 사교육의 기능(설명·연습·피드백·과제지원)을 빠르게 분해하고 있지만, 학위·입시라는 제도를 2035년까지 대체할 가능성은 낮다.",en:"AI is rapidly unbundling the functions of universities and tutoring (explanation, practice, feedback, assignment help), but it is unlikely to replace degrees and entrance exams as institutions by 2035.",ja:"AIは大学と私教育の機能（説明・演習・フィードバック・課題支援）を急速に分解しているが、学位・入試という制度を2035年までに代替する可能性は低い。",ru:"ИИ быстро разбирает на части функции университетов и репетиторства (объяснение, практика, обратная связь, помощь с заданиями), но вряд ли заменит дипломы и вступительные экзамены как институты к 2035 году."},
+  tags:{ko:["대학","사교육","고등교육 정책","2035 시나리오"],en:["Universities","Shadow education","Higher-education policy","2035 scenarios"],ja:["大学","私教育","高等教育政策","2035年シナリオ"],ru:["Университеты","Частное репетиторство","Политика высшего образования","Сценарии 2035"]}}
+];
+const T={
+ ko:{back:"← 메인으로",label:"AI 리서치",title:"AI 리서치 보고서",intro:"생성AI를 활용해 조사·작성한 리서치 보고서를 모아 둡니다. 각 보고서는 문장마다 사람 검증 여부와 메모를 표시하며, 누구나 이름만 입력하면 검증에 참여할 수 있습니다.",count:n=>`보고서 ${n}편 · 최신순`,open:"보고서 열기 →",note:"보고서의 문장마다 근거 등급(A·B·C·D)과 출처가 붙어 있습니다. AI가 작성한 초안이므로, 인용하기 전에 원문 출처와 사람 검증 상태를 확인해 주세요.",footer:"역사학 · 디지털 인문학",doc:"AI 리서치 보고서 | 송영화"},
+ en:{back:"← Home",label:"AI Research",title:"AI Research Reports",intro:"A collection of research reports investigated and written with generative AI. Each report shows, sentence by sentence, whether a human has verified it, with reviewer notes; anyone can join the review by entering a name.",count:n=>`${n} reports · newest first`,open:"Open report →",note:"Every sentence carries an evidence grade (A·B·C·D) and its sources. These are AI-drafted reports: check the original sources and the human-review status before citing them.",footer:"Historian · Digital Humanities",doc:"AI Research Reports | Song Younghwa"},
+ ja:{back:"← メインへ",label:"AIリサーチ",title:"AIリサーチレポート",intro:"生成AIを活用して調査・作成したリサーチレポートをまとめています。各レポートは文ごとに人による検証の有無とメモを表示し、名前を入力すれば誰でも検証に参加できます。",count:n=>`レポート${n}件 · 新しい順`,open:"レポートを開く →",note:"各文には根拠の等級(A・B・C・D)と出典が付いています。AIが作成した草稿のため、引用前に原典と人による検証状況をご確認ください。",footer:"歴史学 · デジタル・ヒューマニティーズ",doc:"AIリサーチレポート | Song Younghwa"},
+ ru:{back:"← На главную",label:"ИИ-исследования",title:"Исследовательские доклады с ИИ",intro:"Подборка исследовательских докладов, подготовленных с помощью генеративного ИИ. В каждом докладе для каждого предложения видно, проверено ли оно человеком, и заметки проверяющих; присоединиться к проверке может любой, указав имя.",count:n=>`Докладов: ${n} · сначала новые`,open:"Открыть доклад →",note:"У каждого предложения указаны уровень доказательности (A·B·C·D) и источники. Это черновики, подготовленные ИИ: перед цитированием проверьте первоисточники и статус проверки человеком.",footer:"История · Цифровые гуманитарные науки",doc:"Доклады с ИИ | Song Younghwa"}
+};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function renderList(lang){
+ const d=T[lang];
+ document.getElementById("count").textContent=d.count(REPORTS.length);
+ document.getElementById("list").innerHTML=REPORTS.map(r=>{
+  const title=r.title[lang]||r.title.ko,sum=r.summary&&(r.summary[lang]||r.summary.ko),tags=(r.tags&&(r.tags[lang]||r.tags.ko))||[];
+  return `<article class="report"><div class="date">${esc(r.date)}</div><div><h2><a href="${esc(r.file)}">${esc(title)}</a></h2>${sum?`<p class="summary">${esc(sum)}</p>`:""}<div class="tags">${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div></div><a class="open" href="${esc(r.file)}">${esc(d.open)}</a></article>`;
+ }).join("");
+}
+function setLanguage(language,save=true){
+ if(!T[language])language="ko";
+ document.documentElement.lang=language;
+ const d=T[language];
+ document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.getAttribute("data-i18n")];if(typeof v==="string")el.textContent=v;});
+ document.querySelectorAll(".language-switcher button").forEach(b=>b.classList.toggle("active",b.dataset.lang===language));
+ document.title=d.doc;
+ renderList(language);
+ if(save){try{localStorage.setItem("preferredLanguage",language);}catch(e){}}
+}
+(function(){
+ let saved=null;try{saved=localStorage.getItem("preferredLanguage");}catch(e){}
+ if(saved&&T[saved])return setLanguage(saved,false);
+ const b=(navigator.language||"ko").toLowerCase();
+ setLanguage(b.startsWith("ja")?"ja":b.startsWith("ru")?"ru":b.startsWith("en")?"en":"ko",false);
+})();
+</script>
+</body>
+</html>

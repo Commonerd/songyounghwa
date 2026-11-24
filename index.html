@@ -73,6 +73,7 @@ nav{width:min(calc(100% - 40px),var(--max));min-height:68px;margin:auto;display:
 .publication-meta-link{display:inline-block;margin-left:8px;text-decoration:underline;text-underline-offset:3px;color:inherit;opacity:.65;font-size:.92em}
 .publication-meta-link:hover{opacity:1}
 .reports-intro{color:var(--muted);font-size:14px;max-width:800px;margin:-10px 0 30px}
+.reports-entry{transition:.2s}.reports-entry:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.1)}
 .activity{display:grid;grid-template-columns:110px 1fr;gap:30px;padding:23px 0;border-bottom:1px solid var(--line)}
 .activity h3{font-size:18px;font-weight:500;letter-spacing:-.02em;margin-bottom:5px}
 .activity a{text-decoration:underline;text-underline-offset:3px}
@@ -373,10 +374,11 @@ footer{padding:34px 0;font-size:13px;line-height:1.5;color:var(--muted)}.footer-
 <div class="section-label" data-i18n="reports.label"></div>
 <h2 class="section-title" data-i18n="reports.title"></h2>
 <p class="reports-intro" data-i18n="reports.intro"></p>
-<!-- 새 보고서는 reports/ 폴더에 HTML을 넣고, 아래 목록 맨 위에 한 줄 추가 (최신순) -->
-<div class="publication-list" id="reports-list">
-<div class="publication"><div class="publication-year">2026.11</div><div><h3><a href="https://commonerd.github.io/songyounghwa/reports/ai-university-shadow-education-2026.html" target="_blank" rel="noopener noreferrer" data-i18n="report.1"></a></h3><p><span data-i18n="report.1p"></span><a class="publication-meta-link" href="https://commonerd.github.io/songyounghwa/reports/ai-university-shadow-education-2026.html" target="_blank" rel="noopener noreferrer">↗</a></p></div></div>
-</div>
+<!-- 보고서 목록은 reports/index.html 에서 관리 (새 보고서는 그 파일의 REPORTS 맨 위에 추가) -->
+<a class="cv-box reports-entry" href="reports/">
+<div><h3 data-i18n="reports.entryTitle"></h3><p data-i18n="reports.entryText"></p></div>
+<span class="button" data-i18n="reports.entryButton"></span>
+</a>
 </div>
 </section>
 
@@ -490,6 +492,18 @@ translations.en.publication.manuscript2Meta="Accepted for publication in 『디�
 translations.ja.publication.manuscript2Meta="『디지털인문학』 · 掲載承認 · 刊行待ち · 単著";
 translations.ru.publication.manuscript2Meta="Принята к публикации в 『디지털인문학』 · Ожидает выхода · Индивидуальное исследование";
 
+translations.ko.reports.entryTitle="AI 리서치 보고서 모아보기";
+translations.ko.reports.entryText="생성AI로 조사·작성한 보고서를 한 페이지에서 모아 관리합니다.";
+translations.ko.reports.entryButton="보고서 목록 →";
+translations.en.reports.entryTitle="Browse all AI research reports";
+translations.en.reports.entryText="All reports researched and written with generative AI, collected on one page.";
+translations.en.reports.entryButton="View reports →";
+translations.ja.reports.entryTitle="AIリサーチレポート一覧";
+translations.ja.reports.entryText="生成AIで調査・作成したレポートを一つのページにまとめています。";
+translations.ja.reports.entryButton="レポート一覧 →";
+translations.ru.reports.entryTitle="Все исследовательские доклады с ИИ";
+translations.ru.reports.entryText="Все доклады, подготовленные с помощью генеративного ИИ, собраны на одной странице.";
+translations.ru.reports.entryButton="К списку докладов →";
 let currentLanguage="ko";
 function getValue(obj,path){return path.split(".").reduce((c,k)=>c?c[k]:undefined,obj)}
 function setLanguage(language,save=true){
