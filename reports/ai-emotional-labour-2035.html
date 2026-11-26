@@ -235,6 +235,15 @@ table.t tr:hover td{background:color-mix(in srgb,var(--accent) 4%,transparent)}
 
 /* mobile: keep panel tables and reference filters inside the viewport */
 .panelc{min-width:0;overflow-x:auto}.reff .seg{flex-wrap:wrap}
+
+/* evidence tables on narrow screens: scroll the table sideways instead of crushing CJK columns to one character */
+.tblwrap table.t:has(tr.sent) td:first-child,.tblwrap table.t:has(tr.sent) th:first-child{white-space:normal;max-width:15em}
+@media (max-width:760px){
+ .tblwrap table.t:has(tr.sent){width:auto;min-width:100%}
+ .tblwrap table.t:has(tr.sent) td,.tblwrap table.t:has(tr.sent) th{min-width:8.5em}
+ .tblwrap table.t:has(tr.sent) td:first-child,.tblwrap table.t:has(tr.sent) th:first-child{white-space:normal;min-width:6.5em;max-width:10em}
+ .tblwrap table.t:has(tr.sent) td:last-child,.tblwrap table.t:has(tr.sent) th:last-child{white-space:normal!important;min-width:5.5em;max-width:7.5em}
+}
 </style>
 </head>
 <body>
@@ -814,6 +823,241 @@ E(42,"C","ind",2025,"Kiran Tomlinson, Sonia Jaffe, Will Wang, Scott Counts & Sid
  "Используется лишь как свидетельство направления: обслуживание, связанное с созданием и передачей информации, находится в центре применения ИИ.",
  "仅作为生成与传递信息的接待业务处于AI应用中心的方向性依据。",
  "情報をつくり伝える応対業務がAI適用の中心にあるという方向性の根拠としてのみ用いる。"]);
+
+// ===== Evidence 43–60: emotional labour among colleagues (asking, mediation, hiding AI use, books) =====
+E(43,"C","press",2026,"ZDNet Korea (다나와 'AI다나와' 이용자 5,586명 조사, 2026-10-13~26; 응답자 직장인 62%), 2026-11-16","직장인 4명 중 3명 \"AI 결과물, 내가 한 듯 보고\"","https://zdnet.co.kr/view/?no=20261116084140",
+"모르는 것이 생겼을 때 AI에게 묻는 것이 편하다는 응답은 72.4%에 달했다",
+["가격비교 기업이 자사 AI 커뮤니티 이용자를 대상으로 이벤트 형식으로 실시한 조사를 보도한 기사다. AI를 이미 즐겨 쓰는 사람들이 표본이어서 'AI가 편하다'는 응답이 과대 추정되었을 가능성이 크고, 직장인만 따로 본 수치는 일부 문항에 한정된다.",
+ "A news report on an event-style survey that a price-comparison company ran among users of its own AI community. Because the sample consists of people who already like using AI, 'AI is easier' is probably overstated, and figures for employees alone are limited to some questions.",
+ "Новостной материал об опросе в формате акции, который компания по сравнению цен провела среди пользователей собственного ИИ-сообщества. Выборка состоит из тех, кто уже охотно пользуется ИИ, поэтому ответ «с ИИ проще» скорее завышен, а данные только по работникам есть лишь для части вопросов.",
+ "这是一篇报道比价企业以活动形式对其自有AI社区用户进行调查的新闻。样本是本来就爱用AI的人，“问AI更自在”的比例很可能被高估，单独列出的上班族数据也仅限部分问题。",
+ "価格比較企業が自社AIコミュニティの利用者を対象にイベント形式で行った調査を報じた記事である。すでにAIを好んで使う人が標本なので「AIの方が気楽」という回答は過大になりやすく、会社員だけの数値は一部の設問に限られる。"],
+["수치의 크기보다 '정확성(5.1%)이 아니라 눈치·민망함·핀잔 회피(65.5%)'라는 이유의 구성이 한국 일터의 질문 비용을 보여주는 방향성 근거로 쓴다.",
+ "Used as directional evidence on the cost of asking in Korean workplaces — less for the size of the figures than for the mix of reasons: avoiding others' moods, embarrassment and scolding (65.5%) rather than accuracy (5.1%).",
+ "Используется как свидетельство направления о «цене вопроса» на корейской работе — не столько из-за величины цифр, сколько из-за структуры причин: избежать чужого настроения, неловкости и упрёков (65,5%), а не точность (5,1%).",
+ "与其看数值大小，不如看理由构成——是回避看人脸色、难为情和挨训（65.5%），而非准确性（5.1%）——以此作为韩国职场“提问成本”的方向性依据。",
+ "数値の大きさよりも、正確さ（5.1%）ではなく気遣い・気恥ずかしさ・小言の回避（65.5%）という理由の構成を、韓国の職場の「質問コスト」を示す方向性の根拠として用いる。"]);
+
+E(44,"C","press",2026,"한경 MONEY (피앰아이 'AI와의 감정교류 인식 조사', 전국 만 20~59세 대화형 AI 이용자 1,000명), 2026-09-18","\"사람보다 AI가 편해\"…이용자 57% 고민·감정 털어놨다","https://magazine.hankyung.com/money/article/202609183239c",
+"응답자의 57.1%는 AI에게 개인적인 고민이나 감정을 이야기해본 적이 있다고 답했다",
+["리서치 기업의 온라인 조사를 보도한 기사로, 표본이 대화형 AI 이용자로 한정되고 '감정 대화'의 범위가 넓게 정의되어 있다. 업무 관계에 관한 고민만 따로 집계한 것은 아니다.",
+ "A news report on a research firm's online survey; the sample is limited to conversational-AI users and 'emotional conversation' is broadly defined. Worries about work relationships are not counted separately.",
+ "Материал об онлайн-опросе исследовательской компании; выборка ограничена пользователями диалогового ИИ, а «эмоциональный разговор» определён широко. Переживания о рабочих отношениях отдельно не учитываются.",
+ "这是一篇报道调研公司在线调查的新闻，样本限于对话式AI用户，“情感对话”的定义较宽，并未单独统计关于职场关系的烦恼。",
+ "調査会社のオンライン調査を報じた記事で、標本は対話型AIの利用者に限られ、「感情の会話」の範囲は広く定義されている。職場の人間関係の悩みだけを別に集計したものではない。"],
+["AI가 감정을 털어놓는 상대로 쓰이고 젊은 층일수록 그 비율이 높다는 방향을 확인하는 데만 쓴다.",
+ "Used only to confirm the direction that AI is used as a confidant for feelings, and more so among younger people.",
+ "Используется только для подтверждения направления: ИИ служит собеседником для чувств, и чаще среди молодых.",
+ "仅用于确认AI被当作倾诉情感的对象、且年轻人比例更高这一方向。",
+ "AIが気持ちを打ち明ける相手として使われ、若い層ほどその割合が高いという方向の確認にのみ用いる。"]);
+
+E(45,"C","press",2026,"AIsmiley (インディードリクルートパートナーズ「AIと仕事に関する日米実態調査」, 日米の20〜59歳就業者20,608人, 2026年3月実施), 最終更新 2026-09-08","仕事の相談相手「生成AI」は日本で約1割、米国では約3割で「同僚」上回る。AIと仕事に関する日米実態調査","https://aismiley.co.jp/ai_news/indeed-recruit-partners-ai-survey/",
+"日本では1位が「同僚」で2位が「上司」となり、それぞれ約3割で拮抗し",
+["채용 플랫폼 기업의 대규모 일·미 비교 조사를 AI 전문 매체가 정리한 기사다. 같은 문항으로 두 나라를 비교한 드문 자료지만, 원 보도자료를 직접 확인하지 못했고 수치가 '약 3할'처럼 반올림되어 있어 정밀 비교에는 한계가 있다.",
+ "An AI trade outlet's summary of a large Japan–US comparison survey by a recruitment-platform company. It is a rare same-question comparison of the two countries, but the original press release could not be checked directly and figures are rounded (e.g. 'about 30%'), limiting precise comparison.",
+ "Обзор отраслевого ИИ-издания о большом японско-американском сравнительном опросе компании-платформы найма. Это редкое сравнение двух стран по одинаковому вопросу, но исходный пресс-релиз проверить напрямую не удалось, а цифры округлены («около 30%»), что ограничивает точное сравнение.",
+ "这是AI专业媒体对招聘平台企业大型日美比较调查的整理报道。虽是少见的同一问题两国比较资料，但未能直接查到原始新闻稿，且数字经过“约三成”式的取整，精确比较有限。",
+ "採用プラットフォーム企業による大規模な日米比較調査をAI専門メディアがまとめた記事である。同じ設問で両国を比べた貴重な資料だが、元のプレスリリースは直接確認できず、数値も「約3割」のように丸められているため、精密な比較には限界がある。"],
+["일본은 여전히 사람(동료·상사)에게 먼저 상의하고 미국은 AI가 상사와 같은 비중이라는 국가 차이, 그리고 '상대에게 폐가 될까 봐'라는 공통 이유의 근거로 쓴다.",
+ "Used as evidence for the country difference — Japanese workers still consult people (colleagues, bosses) first, while in the US AI is on a par with the boss — and for the shared reason 'it might be a burden to the other person'.",
+ "Используется как свидетельство различия стран — в Японии сначала советуются с людьми (коллеги, начальник), а в США ИИ наравне с начальником — и общей причины «могу доставить человеку неудобство».",
+ "用作国家差异的依据——日本仍先找人（同事、上司）商量，而美国AI与上司比重相当——以及“怕给对方添麻烦”这一共同理由的依据。",
+ "日本では今も人（同僚・上司）に先に相談し、米国ではAIが上司と同じ比重であるという国の違い、そして「相手に迷惑がかかるかもしれない」という共通の理由の根拠として用いる。"]);
+
+E(46,"C","survey",2026,"レバレジーズ株式会社（ハタラクティブ）調査リリース, 20代の会社員595名, 2026-03-24","相談相手は“否定されないAI”へ、若手社員の約4人に1人が「上司より生成AI」を信頼","https://leverages.jp/news/2026/0324/5851/",
+"「直属の上司よりも生成AIを信頼する（26.5%）」と回答した人が約4人に1人",
+["전직 지원 서비스를 운영하는 기업의 온라인 조사로, 전직 의향이 있는 청년이 과대 대표될 수 있다. '생성형 AI를 더 신뢰한다'는 응답은 '어느 쪽이냐면 AI'를 합친 값이다.",
+ "An online survey by a company that runs a job-change support service, so young people open to changing jobs may be over-represented. 'Trust generative AI more' combines 'AI' and 'rather AI'.",
+ "Онлайн-опрос компании, которая ведёт сервис помощи в смене работы, поэтому молодёжь, настроенная сменить работу, может быть представлена с перекосом. «Больше доверяю ИИ» объединяет ответы «ИИ» и «скорее ИИ».",
+ "这是运营跳槽支持服务的企业所做的在线调查，有跳槽意愿的年轻人可能被过度代表。“更信任生成式AI”是“AI”和“偏向AI”两项之和。",
+ "転職支援サービスを運営する企業のオンライン調査で、転職志向の若者が多めに含まれうる。「生成AIの方を信頼する」は「生成AI」「どちらかといえば生成AI」の合計である。"],
+["사내 상담 창구의 형식화(35.1%)가 청년의 상담을 AI로 옮기는 요인이라는 방향의 근거로만 쓴다.",
+ "Used only as directional evidence that hollowed-out internal consultation channels (35.1%) push young workers' consultations towards AI.",
+ "Используется только как свидетельство направления: формальность внутренних каналов консультаций (35,1%) толкает молодых работников к ИИ.",
+ "仅作为方向性依据：企业内部咨询渠道流于形式（35.1%）促使年轻员工转向AI。",
+ "社内の相談窓口の形骸化（35.1%）が若手の相談をAIへ向かわせる要因であるという方向の根拠としてのみ用いる。"]);
+
+E(47,"C","ind",2025,"Microsoft WorkLab, 2025 Work Trend Index (Edelman Data x Intelligence; 31,000 knowledge workers in 31 markets, 2025-02-06–03-24)","2025: The Year the Frontier Firm Is Born","https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born",
+"employees cited 24/7 availability (42%), machine speed and quality (30%)",
+["AI 제품을 파는 기업이 독립 조사기관에 맡긴 31개 시장 조사로 표본은 크지만, 응답자가 지식노동자이고 조사 주체가 AI 확산에 이해관계를 가진다.",
+ "A 31-market survey commissioned by a company that sells AI products from an independent research firm; the sample is large, but respondents are knowledge workers and the sponsor has a stake in AI adoption.",
+ "Опрос в 31 стране, заказанный продавцом ИИ-продуктов у независимой исследовательской фирмы; выборка большая, но респонденты — работники умственного труда, а заказчик заинтересован в распространении ИИ.",
+ "这是销售AI产品的企业委托独立调研机构在31个市场开展的调查，样本大，但受访者为知识工作者，且主办方与AI普及存在利害关系。",
+ "AI製品を販売する企業が独立調査機関に委託した31市場の調査で、標本は大きいが、回答者は知識労働者であり、主体がAI普及に利害を持つ。"],
+["동료 대신 AI를 찾는 이유가 세계 평균으로는 '평가 회피'보다 효율(24시간·속도)이라는 비교 기준선으로 쓴다.",
+ "Used as the comparative baseline that, on the global average, people turn to AI instead of colleagues for efficiency (24/7, speed) rather than to avoid judgement.",
+ "Используется как сравнительная база: в среднем по миру к ИИ вместо коллег обращаются ради эффективности (круглосуточно, скорость), а не чтобы избежать оценки.",
+ "用作比较基准：就全球平均而言，人们用AI代替同事是为了效率（全天候、速度），而不是为了回避评判。",
+ "同僚の代わりにAIを使う理由は、世界平均では「評価の回避」より効率（24時間・速度）であるという比較の基準線として用いる。"]);
+
+E(48,"C","ind",2024,"Slack Workforce Lab, Fall 2024 Workforce Index (17,000+ desk workers; fieldwork August 2024)","The Fall 2024 Workforce Index Shows Executives and Employees Investing in AI, but Uncertainty Holding Back Adoption","https://slack.com/blog/news/the-fall-2024-workforce-index-shows-executives-and-employees-investing-in-ai-but-uncertainty-holding-back-adoption",
+"Nearly half (48%) of all desk workers would be uncomfortable admitting to their manager",
+["협업 도구 기업이 발표한 데스크 노동자 조사로, 대상이 사무직에 한정되고 자사 제품 맥락에서 해석된다. 사용자의 언어 설정에 따라 같은 주소에서 현지어판이 열릴 수 있다.",
+ "A desk-worker survey published by a collaboration-software company; it covers office workers only and is interpreted in the context of the company's products. The same address may open a localised version depending on the reader's language.",
+ "Опрос офисных работников, опубликованный компанией — разработчиком ПО для совместной работы; охватывает только офисных сотрудников и трактуется в контексте её продуктов. По тому же адресу может открыться локализованная версия.",
+ "这是协作软件企业发布的办公室员工调查，对象仅限白领，并在其产品语境下解读。同一网址可能因读者语言设置而打开本地语言版。",
+ "コラボレーションツール企業が公表したデスクワーカー調査で、対象は事務職に限られ、自社製品の文脈で解釈されている。同じアドレスでも言語設定によって現地語版が開くことがある。"],
+["AI 사용을 상사에게 밝히기 꺼리는 '은폐의 감정노동'이 널리 퍼져 있다는 방향의 근거로 쓴다.",
+ "Used as directional evidence that the 'emotional labour of concealment' — reluctance to tell one's manager about AI use — is widespread.",
+ "Используется как свидетельство направления: «эмоциональный труд сокрытия» — нежелание говорить руководителю об использовании ИИ — широко распространён.",
+ "用作方向性依据：不愿向上司承认使用AI的“隐瞒型情绪劳动”普遍存在。",
+ "AI利用を上司に打ち明けにくい「隠すことの感情労働」が広がっているという方向の根拠として用いる。"]);
+
+E(49,"B","survey",2025,"University of Melbourne (Gillespie, Lockey et al.) & KPMG, Trust, attitudes and use of AI: A global study 2025 (48,000+ people, 47 countries, Nov 2024–Jan 2025); MBS news release","Global study reveals trust of AI remains a critical challenge","https://mbs.edu/news/global-study-reveals-trust-of-ai-remains-a-critical-challenge",
+"over half (57%) of employees say they hide their use of AI",
+["대학 연구진이 회계법인과 함께 47개국에서 같은 문항으로 실시한 대규모 조사로 국가 비교에 유용하다. 다만 온라인 패널 조사이고, '숨긴다'에는 결과물을 자기 것처럼 제출하는 행위가 함께 묶여 있다.",
+ "A large same-question survey across 47 countries by university researchers with an accounting firm, useful for country comparison. It is an online-panel survey, however, and 'hiding' is bundled with presenting AI output as one's own.",
+ "Крупный опрос в 47 странах с одинаковыми вопросами, проведённый университетскими исследователями совместно с аудиторской компанией; полезен для сравнения стран. Однако это опрос онлайн-панели, и «сокрытие» объединено с выдачей результатов ИИ за свои.",
+ "这是大学研究团队与会计师事务所在47国以相同问题开展的大型调查，适合国家比较；但属于在线样本调查，“隐瞒”与把AI产出当作自己的成果提交被合并在一起。",
+ "大学の研究チームが会計事務所と共同で47か国に同じ設問で行った大規模調査で、国際比較に有用である。ただしオンラインパネル調査であり、「隠す」にはAIの成果物を自分のものとして出す行為が一緒に含まれている。"],
+["AI 사용의 은폐가 특정 국가가 아닌 세계적 현상이라는 판단의 핵심 근거로 쓴다.",
+ "Used as the core evidence that concealing AI use is a global phenomenon, not a national one.",
+ "Используется как основное свидетельство того, что сокрытие использования ИИ — мировое, а не национальное явление.",
+ "作为“隐瞒使用AI是全球现象而非个别国家现象”这一判断的核心依据。",
+ "AI利用の隠蔽が特定の国ではなく世界的な現象であるという判断の中心的な根拠として用いる。"]);
+
+E(50,"A","q1",2025,"Jessica A. Reif, Richard P. Larrick & Jack B. Soll, PNAS 122(19): e2426766122 (2025), PMID 40339114","Evidence of a social evaluation penalty for using AI","https://pmc.ncbi.nlm.nih.gov/articles/PMC12088386/",
+"observers perceive people who get help from AI as lazier, less competent",
+["사전 등록된 네 개 실험(4,400여 명)으로 'AI 사용자 낙인'을 측정한 동료심사 논문이다. 실험·시나리오 상황이라 실제 직장의 장기 평가로 그대로 옮기기는 어렵고, 미국 온라인 표본 중심이다.",
+ "A peer-reviewed paper measuring the stigma of AI use in four pre-registered experiments (4,400+ participants). Being experimental and scenario-based, it does not transfer directly to long-term appraisal in real workplaces, and it relies mainly on US online samples.",
+ "Рецензируемая статья, измеряющая стигму использования ИИ в четырёх предрегистрированных экспериментах (более 4400 участников). Эксперименты и сценарии нельзя напрямую перенести на долгосрочную оценку на реальной работе; выборки в основном американские онлайн.",
+ "这是通过四项预注册实验（4,400余人）测量“AI使用者污名”的同行评审论文。实验与情景设置难以直接推及真实职场的长期评价，且以美国在线样本为主。",
+ "事前登録した四つの実験（4,400人余り）で「AI利用者へのスティグマ」を測った査読論文である。実験・シナリオ状況なので実際の職場の長期的評価にそのまま移すのは難しく、米国のオンライン標本が中心である。"],
+["AI에게 물어 핀잔을 피한 사람이 이번에는 'AI를 썼다'는 사실로 평가받는다는 메커니즘의 근거로 쓴다.",
+ "Used as evidence for the mechanism by which someone who avoided scolding by asking AI is now judged for having used AI.",
+ "Используется как свидетельство механизма: человек, избежавший упрёков благодаря ИИ, теперь оценивается за сам факт использования ИИ.",
+ "用作以下机制的依据：靠问AI躲开训斥的人，转而因“用了AI”而被评判。",
+ "AIに聞いて小言を避けた人が、今度は「AIを使った」こと自体で評価されるというメカニズムの根拠として用いる。"]);
+
+E(51,"A","q1",2023,"Jana Holthöwer & Jenny van Doorn, Journal of the Academy of Marketing Science 51(4): 767–784 (2023), PMID 35463183","Robots do not judge: service robots can alleviate embarrassment in service encounters","https://pmc.ncbi.nlm.nih.gov/articles/PMC9019535/",
+"consumers feel less judged by a robot (vs. a human)",
+["실험실·현장(페이스북 광고)·온라인의 다섯 개 연구로 '평가받는 느낌'의 차이를 확인한 동료심사 논문이다. 대상은 고객의 민망한 구매 상황이어서, 직장 동료 사이의 질문에 적용하는 것은 유추다.",
+ "A peer-reviewed paper confirming the difference in 'feeling judged' across five lab, field (Facebook ads) and online studies. The setting is customers' embarrassing purchases, so applying it to questions between colleagues is an analogy.",
+ "Рецензируемая статья, подтвердившая разницу в ощущении «меня оценивают» в пяти лабораторных, полевых (реклама в Facebook) и онлайн-исследованиях. Речь о неловких покупках клиентов, поэтому перенос на вопросы между коллегами — аналогия.",
+ "这是通过实验室、现场（Facebook广告）和在线共五项研究确认“被评判感”差异的同行评审论文。研究情境是顾客的尴尬购买，推及同事之间的提问属于类比。",
+ "実験室・フィールド（Facebook広告）・オンラインの五つの研究で「評価されている感覚」の差を確かめた査読論文である。対象は顧客の気恥ずかしい購買場面なので、職場の同僚間の質問に当てはめるのは類推である。"],
+["AI가 '평가하지 않는 상대'로 느껴진다는 심리 메커니즘의 근거로 쓴다.",
+ "Used as evidence for the psychological mechanism by which AI feels like a counterpart that does not judge.",
+ "Используется как свидетельство психологического механизма: ИИ воспринимается как собеседник, который не оценивает.",
+ "用作AI被感知为“不评判的对象”这一心理机制的依据。",
+ "AIが「評価しない相手」と感じられるという心理メカニズムの根拠として用いる。"]);
+
+E(52,"A","q1",2023,"Jess Hohenstein, Rene F. Kizilcec, Dominic DiFranzo, Zhila Aghajari, Hannah Mieczkowski, Karen Levy, Mor Naaman, Jeffrey Hancock & Malte F. Jung, Scientific Reports 13: 5487 (2023), PMID 37015964","Artificial intelligence in communication impacts language and social relationships","https://pmc.ncbi.nlm.nih.gov/articles/PMC10073210/",
+"people are evaluated more negatively if they are suspected to be using algorithmic responses",
+["무작위 실험으로 AI 답장 추천의 사회적 효과를 측정한 동료심사 논문이다. 낯선 사람 간 짧은 대화 과제여서, 위계가 있는 장기 직장 관계에 그대로 적용하기는 어렵다.",
+ "A peer-reviewed paper measuring the social effects of AI reply suggestions in randomised experiments. The task was a short conversation between strangers, so it does not carry over directly to long-term, hierarchical workplace relationships.",
+ "Рецензируемая статья, измерившая социальные эффекты подсказок ответов ИИ в рандомизированных экспериментах. Задача — короткий разговор незнакомцев, поэтому прямо переносить её на долгие иерархические рабочие отношения нельзя.",
+ "这是用随机实验测量AI回复建议社会效应的同行评审论文。任务是陌生人之间的短对话，难以直接推及有层级的长期职场关系。",
+ "ランダム化実験でAIの返信候補の社会的効果を測った査読論文である。見知らぬ人どうしの短い会話課題なので、上下関係のある長期的な職場関係にそのまま当てはめるのは難しい。"],
+["AI가 대화의 정서를 부드럽게 하는 '중재' 효과와, AI 개입이 드러나면 그 효과가 깎이는 한계를 함께 보여주는 근거로 쓴다.",
+ "Used as evidence both for AI's 'mediating' effect of softening the emotional tone of conversation and for its limit — the effect erodes once AI involvement is suspected.",
+ "Используется как свидетельство и «посреднического» эффекта ИИ, смягчающего эмоциональный тон разговора, и его предела: эффект исчезает, если заподозрят участие ИИ.",
+ "既用作AI缓和对话情绪的“调解”效果的依据，也用作其局限的依据——一旦被怀疑用了AI，效果便打折扣。",
+ "AIが会話の感情を和らげる「仲介」効果と、AIの関与が疑われるとその効果が削がれる限界の両方を示す根拠として用いる。"]);
+
+E(53,"A","q1",2024,"Michael Henry Tessler, Michiel A. Bakker et al., Science (2024); Google DeepMind publication page, 2024-10-18","AI can help humans find common ground in democratic deliberation","https://deepmind.google/research/publications/ai-can-help-humans-find-common-ground-in-democratic-deliberation/",
+"preferred AI-generated statements to those written by human mediators",
+["영국 시민 5,734명이 참여한 실험으로 AI 중재자의 합의문 작성 능력을 검증한 동료심사 논문이며, 게시 페이지는 개발 기업의 것이다. 정치 쟁점의 숙의 실험이어서 직장 갈등 중재로의 확장은 유추이고, '합의 최적화'가 깊은 숙의를 대체한다는 비판도 있다.",
+ "A peer-reviewed paper testing an AI mediator's ability to draft group statements with 5,734 UK participants; the linked page belongs to the developer. It concerns deliberation on political issues, so extending it to workplace conflict mediation is an analogy, and critics argue that optimising for agreement can replace deep deliberation.",
+ "Рецензируемая статья, проверившая способность ИИ-посредника составлять общие заявления с участием 5734 жителей Великобритании; страница принадлежит разработчику. Речь о обсуждении политических вопросов, поэтому перенос на посредничество в рабочих конфликтах — аналогия; критики считают, что оптимизация согласия может подменять глубокое обсуждение.",
+ "这是有5,734名英国公民参与、检验AI调解员撰写共识声明能力的同行评审论文，所链页面属于开发企业。它针对政治议题的审议，推及职场冲突调解属于类比；也有批评认为“为共识而优化”会取代深度审议。",
+ "英国市民5,734人が参加し、AI仲介者の合意文作成能力を検証した査読論文で、掲載ページは開発企業のものである。政治的争点の熟議実験なので職場の対立の仲介への拡張は類推であり、「合意の最適化」が深い熟議を置き換えるという批判もある。"],
+["AI가 서로 다른 의견을 정리해 공통점을 찾는 '중재자' 역할을 할 수 있다는 가능성의 근거로 쓴다.",
+ "Used as evidence that AI can act as a 'mediator' that organises differing views and finds common ground.",
+ "Используется как свидетельство того, что ИИ может играть роль «посредника», который упорядочивает разные мнения и находит общее.",
+ "用作AI可以充当整理分歧、寻找共同点的“调解员”这一可能性的依据。",
+ "AIが異なる意見を整理して共通点を見つける「仲介者」の役割を果たしうるという可能性の根拠として用いる。"]);
+
+E(54,"B","io",2025,"Fabrizio Dell'Acqua, Charles Ayoubi, Hila Lifshitz, Raffaella Sadun, Ethan Mollick, Lilach Mollick, Yi Han, Jeff Goldman, Hari Nair, Stewart Taub, Karim Lakhani et al., NBER Working Paper 33641 (2025)","The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise","https://www.nber.org/papers/w33641",
+"individuals with AI matched the performance of teams without AI",
+["P&G 전문가 776명을 무작위 배정한 사전 등록 현장 실험이지만, 하루짜리 혁신 과제이고 연구진 일부가 AI 활용을 연구·자문하는 입장이다. 워킹페이퍼 단계의 결과로 본다.",
+ "A pre-registered field experiment that randomly assigned 776 P&G professionals, but the task was a one-day innovation challenge and some authors research and advise on AI use. Treated as a working-paper result.",
+ "Предрегистрированный полевой эксперимент со случайным распределением 776 специалистов P&G, но задача была однодневной инновационной, а часть авторов изучает и консультирует по использованию ИИ. Рассматривается как результат рабочего доклада.",
+ "这是对776名宝洁专业人员随机分组的预注册现场实验，但任务是为期一天的创新挑战，部分作者本身研究并咨询AI应用。视为工作论文阶段的结果。",
+ "P&Gの専門職776人を無作為に割り当てた事前登録のフィールド実験だが、1日の革新課題であり、著者の一部はAI活用を研究・助言する立場にある。ワーキングペーパー段階の結果として扱う。"],
+["AI가 성과뿐 아니라 동료가 주던 정서적·동기적 역할 일부를 대신할 수 있다는 근거로 쓴다.",
+ "Used as evidence that AI can take over not only performance but part of the emotional and motivational role that teammates provided.",
+ "Используется как свидетельство того, что ИИ может взять на себя не только результат, но и часть эмоциональной и мотивационной роли коллег.",
+ "用作AI不仅能提升绩效、还能替代同事所提供的部分情感与激励作用的依据。",
+ "AIが成果だけでなく、同僚が担っていた感情面・動機づけの役割の一部を代わりうるという根拠として用いる。"]);
+
+E(55,"A","q1",2023,"Pok Man Tang, Joel Koopman, Ke Michael Mai, David De Cremer, Jack H. Zhang, Philipp Reynders, Chin Tung Stewart Ng & I-Heng Chen, Journal of Applied Psychology 108(11): 1766–1789 (2023), PMID 37307359","No person is an island: Unpacking the work and after-work consequences of interacting with artificial intelligence","https://pubmed.ncbi.nlm.nih.gov/37307359/",
+"a feeling of loneliness (maladaptive), which then further impair employee well-being after work",
+["대만·인도네시아·미국·말레이시아 노동자 794명을 대상으로 설문·현장 실험·시뮬레이션을 결합한 동료심사 논문이다. 생성형 AI 이전의 업무용 AI 시스템을 다루며, 일부 결과는 상관관계여서 인과로 단정하기 어렵다.",
+ "A peer-reviewed paper combining surveys, a field experiment and a simulation with 794 workers in Taiwan, Indonesia, the US and Malaysia. It concerns workplace AI systems from before generative AI, and some results are correlational, so causation cannot be asserted.",
+ "Рецензируемая статья, сочетающая опросы, полевой эксперимент и симуляцию с 794 работниками Тайваня, Индонезии, США и Малайзии. Речь о рабочих ИИ-системах до генеративного ИИ, часть результатов корреляционная, поэтому причинность утверждать нельзя.",
+ "这是结合问卷、现场实验与模拟、以台湾、印度尼西亚、美国和马来西亚794名员工为对象的同行评审论文。研究的是生成式AI之前的工作用AI系统，部分结果属相关关系，难以断定因果。",
+ "台湾・インドネシア・米国・マレーシアの労働者794人を対象に、調査・フィールド実験・シミュレーションを組み合わせた査読論文である。生成AI以前の業務用AIシステムを扱い、一部の結果は相関関係なので因果とは断定しにくい。"],
+["AI가 사람 사이의 상호작용을 대신할 때 외로움이라는 비용과 '사람을 찾는' 반작용이 함께 생긴다는 핵심 근거로 쓴다.",
+ "Used as the core evidence that when AI replaces human interaction, a cost (loneliness) and a counter-reaction (seeking people out) arise together.",
+ "Используется как основное свидетельство того, что, когда ИИ заменяет человеческое общение, одновременно возникают цена (одиночество) и ответная реакция (поиск людей).",
+ "作为核心依据：当AI取代人际互动时，孤独这一代价与“去找人”的反作用会同时出现。",
+ "AIが人どうしのやり取りを代わるとき、孤独というコストと「人を求める」反作用が同時に生じるという中心的な根拠として用いる。"]);
+
+E(56,"A","q1",2024,"R. Maria del Rio-Chanona, Nadzeya Laurentsyeva & Johannes Wachs, PNAS Nexus 3(9): pgae400 (2024); Institute for New Economic Thinking at Oxford news, 2024-09-26","New Study Reveals Impact of ChatGPT on Public Knowledge Sharing","https://www.inet.ox.ac.uk/news/new-study-reveals-impact-of-chatgpt-on-public-knowledge-sharing",
+"ChatGPT led to a 25% drop in activity on Stack Overflow",
+["비교 플랫폼을 대조군으로 쓴 이중차분 설계의 동료심사 논문을 연구소가 소개한 글이다. 공개 사이트의 활동만 측정하므로 사내 메신저나 대면 질문의 변화는 알 수 없고, 감소는 ChatGPT 이전부터 일부 시작되었다는 지적도 있다.",
+ "A research institute's summary of a peer-reviewed difference-in-differences study using comparable platforms as controls. It measures only activity on a public site, so it cannot capture changes in internal chat or face-to-face questions, and some note the decline began partly before ChatGPT.",
+ "Обзор научного института о рецензируемом исследовании «разность разностей» со сравнимыми платформами в качестве контроля. Измеряется лишь активность на публичном сайте, поэтому изменения во внутренних чатах и личных вопросах не видны; отмечают также, что спад частично начался до ChatGPT.",
+ "这是研究机构对一篇以可比平台为对照组的双重差分同行评审论文的介绍。只测量公开网站上的活动，无法反映内部聊天或当面提问的变化，也有人指出下降在ChatGPT之前已部分开始。",
+ "比較可能なプラットフォームを対照群にした差分の差分法による査読論文を、研究所が紹介した記事である。公開サイトの活動だけを測るため社内チャットや対面での質問の変化はわからず、減少はChatGPT以前から一部始まっていたという指摘もある。"],
+["개발자 업계에서 '사람에게 묻는 공개 대화'가 AI로 옮겨 가 공동체의 지식 공유가 줄어든다는 근거로 쓴다.",
+ "Used as evidence that, in software development, public 'asking people' conversations are moving to AI and community knowledge-sharing is shrinking.",
+ "Используется как свидетельство того, что в разработке ПО публичные «вопросы людям» переходят к ИИ и обмен знаниями в сообществе сокращается.",
+ "用作依据：在软件开发领域，“向人提问”的公开对话正转向AI，社区的知识共享随之减少。",
+ "ソフトウェア開発で「人に聞く公開の対話」がAIへ移り、コミュニティの知識共有が減っているという根拠として用いる。"]);
+
+E(57,"B","io",2025,"Manuel Hoffmann, Sam Boysel, Frank Nagle, Sida Peng & Kevin Xu, 'Generative AI and the Nature of Work' (CESifo WP 11479); MIT Initiative on the Digital Economy summary (Beth LaMontagne)","Beyond Productivity: GenAI and the Changing Nature of Work","https://ide.mit.edu/insights/beyond-productivity-genai-and-the-changing-nature-of-work",
+"they turned to GitHub Copilot, instead of seeking advice and solutions from peers",
+["오픈소스 개발자 18만 7천여 명의 GitHub 활동을 분석한 워킹페이퍼를 연구소가 요약한 글로, 저자 일부가 GitHub·Microsoft 소속이다. 오픈소스 환경이라 회사 안의 사수·신입 관계로 일반화하는 데는 한계가 있다.",
+ "A research institute's summary of a working paper analysing the GitHub activity of more than 187,000 open-source developers; some authors work at GitHub and Microsoft. The open-source setting limits generalisation to mentor–junior relationships inside companies.",
+ "Обзор научного института о рабочем докладе, анализирующем активность на GitHub более 187 000 разработчиков открытого ПО; часть авторов работает в GitHub и Microsoft. Среда открытого ПО ограничивает перенос на отношения наставника и новичка внутри компаний.",
+ "这是研究机构对一篇分析18.7万余名开源开发者GitHub活动的工作论文所作的摘要，部分作者任职于GitHub和微软。开源环境限制了其推及企业内部师徒关系的程度。",
+ "オープンソース開発者18万7千人余りのGitHub活動を分析したワーキングペーパーを研究所が要約した記事で、著者の一部はGitHub・Microsoft所属である。オープンソース環境のため、社内の先輩・新人関係への一般化には限界がある。"],
+["AI가 동료에게 묻는 일을 대신하면서 독립적 작업이 늘고 멘토링 기회가 줄 수 있다는 근거로 쓴다.",
+ "Used as evidence that as AI replaces asking colleagues, independent work rises and mentoring opportunities may shrink.",
+ "Используется как свидетельство того, что, когда ИИ заменяет вопросы коллегам, растёт самостоятельная работа и могут сокращаться возможности наставничества.",
+ "用作依据：AI取代向同事提问后，独立工作增加，带教机会可能减少。",
+ "AIが同僚に聞くことを代わることで独立した作業が増え、メンタリングの機会が減りうるという根拠として用いる。"]);
+
+E(58,"C","book",2023,"조경숙, 『액세스가 거부되었습니다』, 휴머니스트 (2023; 전자책 ISBN 9791170870111) — 리디 도서 정보(목차·출판사 서평)","액세스가 거부되었습니다","https://ridibooks.com/books/243000481",
+"이런 것도 모르면서 개발자라고 할 수 있나요?",
+["개발자 출신 테크-페미 활동가가 여성 노동자로서의 경험을 바탕으로 쓴 테크 업계 관찰기로, 체계적 조사가 아니라 현장 경험과 사례에 기반한 논증이다. 본 보고서는 목차와 출판사 서평에서 확인되는 범위의 논지만 인용했다.",
+ "An observational book on the tech industry by a former developer and tech-feminist activist, drawing on her experience as a woman worker; its argument rests on field experience and cases, not systematic surveys. This report cites only the argument visible in the table of contents and the publisher's review.",
+ "Книга-наблюдение о технологической отрасли бывшей разработчицы и техно-феминистской активистки, основанная на её опыте работницы; аргументация опирается на полевой опыт и случаи, а не на систематические опросы. Доклад цитирует лишь тезисы, видимые в оглавлении и издательской аннотации.",
+ "这是一位开发者出身的科技女性主义活动家基于自身女性劳动者经历写成的科技业观察记，论证建立在现场经验与案例上，而非系统调查。本报告仅引用目录与出版社书评中可确认的论点。",
+ "開発者出身のテック・フェミニスト活動家が、女性労働者としての経験をもとに書いたテック業界の観察記で、体系的な調査ではなく現場経験と事例に基づく論証である。本報告は目次と出版社の書評で確認できる範囲の論旨のみを引用した。"],
+["'독성 말투'라는 질문의 감정 비용, 6장의 「감정노동 없이 물어볼 수 있는 사수, 챗GPT」와 「기계의 윤리적 태도를 위해 희생되는 건 누구일까」라는 문제 설정을 이 장의 출발점으로 쓴다.",
+ "Used as the starting point of this section: the emotional cost of asking under a 'toxic tone', and Chapter 6's framing — 'ChatGPT, a senior you can ask without emotional labour' and 'Who is sacrificed for the machine's ethical manners?'",
+ "Используется как отправная точка раздела: эмоциональная цена вопроса при «токсичном тоне» и постановка проблемы в главе 6 — «ChatGPT — наставник, которого можно спросить без эмоционального труда» и «Кем жертвуют ради этичного поведения машины?»",
+ "作为本章的出发点：“毒舌”带来的提问情绪成本，以及第6章的问题设定——“无需情绪劳动就能请教的师傅ChatGPT”与“为了机器的伦理姿态，牺牲的是谁？”",
+ "「毒舌」による質問の感情コストと、第6章の「感情労働なしで聞ける先輩、ChatGPT」「機械の倫理的態度のために犠牲になるのは誰か」という問題設定を、この章の出発点として用いる。"]);
+
+E(59,"B","book",2015,"Sherry Turkle (MIT), Reclaiming Conversation: The Power of Talk in a Digital Age, Penguin Press (2015) — publisher's page","Reclaiming Conversation: The Power of Talk in a Digital Age","https://www.penguinrandomhouse.com/books/313732/reclaiming-conversation-by-sherry-turkle/",
+"we have sacrificed conversation for mere connection",
+["5년간 가정·학교·직장에서의 면접과 관찰에 기반한 연구서로, 스마트폰 시대를 다루며 생성형 AI 이전에 쓰였다. 대면 대화의 가치를 강하게 주장하는 규범적 입장이 섞여 있다.",
+ "A research-based book drawing on five years of interviews and observation in homes, schools and workplaces; it addresses the smartphone era and predates generative AI, and it mixes in a strongly normative case for face-to-face talk.",
+ "Исследовательская книга на основе пяти лет интервью и наблюдений в семьях, школах и на работе; посвящена эпохе смартфонов и написана до генеративного ИИ, с сильной нормативной позицией в пользу живого разговора.",
+ "这是基于五年间在家庭、学校和职场的访谈与观察写成的研究型著作，针对智能手机时代、写于生成式AI之前，并夹杂着强烈主张面对面交谈价值的规范立场。",
+ "家庭・学校・職場での5年間のインタビューと観察に基づく研究書で、スマートフォン時代を扱い生成AI以前に書かれた。対面の会話の価値を強く主張する規範的な立場が混じっている。"],
+["대면 대화가 공감과 신뢰를 기르는 장이라는 관점에서 '줄어드는 대화'의 비용을 해석하는 틀로 쓴다.",
+ "Used as a framework for interpreting the cost of 'disappearing conversations', from the view that face-to-face talk is where empathy and trust grow.",
+ "Используется как рамка для толкования цены «исчезающих разговоров» с точки зрения того, что живой разговор взращивает эмпатию и доверие.",
+ "以“面对面交谈是培养共情与信任之所”的观点，作为解读“减少的对话”之代价的框架。",
+ "対面の会話が共感と信頼を育てる場であるという観点から、「減っていく会話」のコストを解釈する枠組みとして用いる。"]);
+
+E(60,"B","book",2019,"Mary L. Gray & Siddharth Suri, Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass, Houghton Mifflin Harcourt (2019) — book website","Ghost Work","https://ghostwork.info/",
+"the invisible human workforce that powers the web",
+["인도·미국의 플랫폼 노동자에 대한 민족지와 조사에 기반한 연구서이며, 저자들은 집필 당시 마이크로소프트 리서치 소속이었다. 생성형 AI 이전의 크라우드 노동을 다루지만, 데이터 레이블링 노동의 구조는 이어진다.",
+ "A research-based book drawing on ethnography and surveys of platform workers in India and the US; the authors were at Microsoft Research at the time. It covers crowd work before generative AI, but the structure of data-labelling work carries over.",
+ "Исследовательская книга на основе этнографии и опросов платформенных работников Индии и США; авторы тогда работали в Microsoft Research. Речь о краудработе до генеративного ИИ, но структура труда по разметке данных сохраняется.",
+ "这是基于对印度和美国平台劳动者的民族志与调查写成的研究型著作，作者写作时任职于微软研究院。书中讨论的是生成式AI之前的众包劳动，但数据标注劳动的结构延续至今。",
+ "インドと米国のプラットフォーム労働者への民族誌と調査に基づく研究書で、著者らは執筆当時マイクロソフトリサーチに所属していた。生成AI以前のクラウドワークを扱うが、データラベリング労働の構造は続いている。"],
+["AI가 걸러 주는 감정의 비용이 보이지 않는 노동자에게 옮겨 간다는 논지의 근거로 쓴다.",
+ "Used as evidence for the argument that the cost of the emotions AI filters out is shifted onto invisible workers.",
+ "Используется как свидетельство тезиса о том, что цена эмоций, которые фильтрует ИИ, перекладывается на невидимых работников.",
+ "用作以下论点的依据：AI替人过滤掉的情绪，其代价被转移到看不见的劳动者身上。",
+ "AIがこしとる感情のコストが見えない労働者へ移るという論旨の根拠として用いる。"]);
 
 // ===== §0 Executive summary =====
 SEC("summary",["핵심 판단 (Executive Summary)","Key Judgements (Executive Summary)","Ключевые выводы (резюме)","核心判断（执行摘要）","主要判断（エグゼクティブサマリー）"],
@@ -1541,6 +1785,322 @@ SEC("method",["방법론·근거 등급·한계","Methodology, Evidence Grades a
 
 SEC("refs",["근거 목록","Evidence List","Список источников","依据列表","根拠一覧"],[REFL],[REFL]);
 
+// ===== Current ⑥: emotional labour among colleagues — asking AI instead of people =====
+SEC("peers",["현재 ⑥: 동료 사이의 감정노동 — '이런 것도 모르냐' 대신 AI에게 묻는다","Current ⑥: Emotional Labour Among Colleagues — Asking AI Instead of Hearing 'You Don't Even Know This?'","Сейчас ⑥: эмоциональный труд между коллегами — спросить ИИ, а не услышать «ты даже этого не знаешь?»","现状⑥：同事之间的情绪劳动——宁可问AI，也不想听“这都不知道？”","現在⑥：同僚どうしの感情労働――「こんなことも知らないの？」の代わりにAIに聞く"],
+[P(
+ s("D",[58,1],["지금까지 다룬 감정노동이 고객을 향한 것이었다면, 일터에는 상사·선배·동료를 향한 또 하나의 감정노동이 있다: 모르는 것을 물을 때 무능해 보일까 걱정하고, '이런 것도 모르냐'는 핀잔을 견디는 일이다.",
+  "If the emotional labour discussed so far is directed at customers, the workplace holds another kind directed at bosses, seniors and colleagues: worrying about looking incompetent when asking what you don't know, and enduring the put-down 'you don't even know this?'",
+  "Если до сих пор речь шла об эмоциональном труде по отношению к клиентам, то на работе есть и другой — по отношению к начальникам, старшим и коллегам: бояться показаться некомпетентным, спрашивая о том, чего не знаешь, и терпеть упрёк «ты даже этого не знаешь?».",
+  "如果说前文讨论的情绪劳动面向顾客，那么职场里还有另一种面向上司、前辈和同事的情绪劳动：问不懂的事时担心显得无能，还要忍受“这都不知道？”的数落。",
+  "ここまでの感情労働が顧客に向けたものだとすれば、職場には上司・先輩・同僚に向けたもう一つの感情労働がある。わからないことを聞くとき無能に見えないかと気をもみ、「こんなことも知らないの？」という小言に耐えることだ。"]),
+ s("C",[58],["개발자 출신 테크-페미 활동가 조경숙의 『액세스가 거부되었습니다』(2023)는 '이런 것도 모르면서 개발자라고 할 수 있나요?' 같은 개발자들의 '독성 말투'를 다루며, 출판사 서평에 따르면 이를 개인의 인성 탓보다 압박을 견디라고 강요하는 개발 문화와 성과 중심 조직의 문제로 본다.",
+  "Access Denied (액세스가 거부되었습니다, 2023), by former developer and tech-feminist activist Cho Kyung-sook, examines developers' 'toxic tone' — lines such as 'Can you call yourself a developer if you don't even know this?' — and, according to the publisher's review, treats it less as a matter of personal character than of a development culture that demands enduring pressure and of performance-driven organisations.",
+  "Книга бывшей разработчицы и техно-феминистской активистки Чо Кёнсук «Доступ запрещён» (액세스가 거부되었습니다, 2023) разбирает «токсичный тон» разработчиков — фразы вроде «Разве можно называться разработчиком, если не знаешь даже этого?» — и, согласно издательской аннотации, видит в нём не столько черту характера, сколько проблему культуры разработки, требующей терпеть давление, и организаций, ориентированных на результат.",
+  "开发者出身的科技女性主义活动家조경숙（Cho Kyung-sook）在《访问被拒绝》（액세스가 거부되었습니다，2023）中讨论了“连这都不知道，还能叫开发者吗？”之类的开发者“毒舌”；据出版社书评，她认为这与其说是个人品性问题，不如说是强迫人忍受压力的开发文化和以绩效为中心的组织的问题。",
+  "開発者出身のテック・フェミニスト活動家チョ・ギョンスクの『アクセスが拒否されました』（액세스가 거부되었습니다、2023）は、「こんなことも知らないで開発者と言えるんですか？」のような開発者の「毒舌」を取り上げ、出版社の書評によれば、それを個人の人柄よりも、圧力に耐えることを強いる開発文化と成果中心の組織の問題とみる。"],
+  ["책의 논지는 목차와 출판사 서평에서 확인되는 범위로만 인용했다.","The book's argument is cited only as far as its table of contents and publisher's review show.","Тезисы книги приводятся только в пределах оглавления и издательской аннотации.","书中论点仅在目录与出版社书评可确认的范围内引用。","本の論旨は目次と出版社の書評で確認できる範囲でのみ引用した。"],"H"),
+ s("C",[58],["같은 책 6장 「낙관하기도 비관하기도 이른 인공지능」의 첫 꼭지 제목은 「감정노동 없이 물어볼 수 있는 사수, 챗GPT」이고 바로 다음 꼭지는 「기계의 윤리적 태도를 위해 희생되는 건 누구일까」여서, AI가 덜어 주는 감정노동과 AI 뒤로 옮겨 가는 감정노동을 한 장에서 함께 묻는다.",
+  "In the same book, Chapter 6, 'AI: Too Early for Optimism or Pessimism', opens with a section titled 'ChatGPT, a senior you can ask without emotional labour', followed directly by 'Who is sacrificed for the machine's ethical manners?' — asking in one chapter about the emotional labour AI lifts and the emotional labour that shifts behind AI.",
+  "В той же книге глава 6 «Для ИИ рано и оптимизма, и пессимизма» открывается разделом «ChatGPT — наставник, которого можно спросить без эмоционального труда», а сразу за ним идёт «Кем жертвуют ради этичного поведения машины?»: в одной главе ставится вопрос и об эмоциональном труде, который снимает ИИ, и о том, который уходит за его спину.",
+  "同书第6章《对人工智能乐观或悲观都为时尚早》的第一节题为《无需情绪劳动就能请教的师傅，ChatGPT》，紧接着一节是《为了机器的伦理姿态，牺牲的是谁？》——在同一章里同时追问AI减轻的情绪劳动与转移到AI背后的情绪劳动。",
+  "同書の第6章「楽観するにも悲観するにも早い人工知能」の最初の節は「感情労働なしで聞ける先輩、ChatGPT」で、すぐ次の節は「機械の倫理的態度のために犠牲になるのは誰か」であり、AIが減らす感情労働とAIの背後へ移る感情労働を一つの章で問う構成になっている。"],
+  ["장·꼭지 제목의 우리말은 원문 그대로이고, 다른 언어는 본 보고서의 번역이다.","Chapter and section titles are quoted verbatim in Korean; other languages are this report's translations.","Названия главы и разделов приведены дословно по-корейски; на других языках — перевод доклада.","章节标题的韩文为原文，其他语言为本报告的翻译。","章・節の題は韓国語が原文どおりで、他の言語は本報告の翻訳である。"],"H"),
+ s("A",[51],["AI가 '평가하지 않는 상대'라는 감각은 실험으로도 확인된다: 실험실·현장·온라인의 다섯 개 연구에서 사람들은 민망한 상황에서 사람보다 로봇에게 덜 평가받는다고 느꼈고, 그래서 로봇의 응대를 더 선호했다.",
+  "The sense that AI is a counterpart that does not judge is confirmed experimentally: across five lab, field and online studies, people in embarrassing situations felt less judged by a robot than by a human and therefore preferred to be served by the robot.",
+  "Ощущение, что ИИ — собеседник, который не оценивает, подтверждается экспериментально: в пяти лабораторных, полевых и онлайн-исследованиях люди в неловких ситуациях чувствовали, что робот оценивает их меньше, чем человек, и поэтому предпочитали обслуживание роботом.",
+  "“AI是不评判的对象”这种感觉也得到了实验证实：在实验室、现场和在线的五项研究中，人们在尴尬情境下觉得机器人比人更少评判自己，因而更愿意由机器人提供服务。",
+  "AIが「評価しない相手」だという感覚は実験でも確かめられている。実験室・フィールド・オンラインの五つの研究で、人は気恥ずかしい場面では人よりロボットの方が評価されていないと感じ、そのためロボットによる応対を好んだ。"],
+  ["대상은 고객의 민망한 구매 상황이어서, 동료 사이의 질문에 적용하는 것은 유추다.","The setting is customers' embarrassing purchases, so applying it to questions between colleagues is an analogy.","Речь о неловких покупках клиентов, поэтому перенос на вопросы между коллегами — аналогия.","研究情境是顾客的尴尬购买，推及同事间提问属于类比。","対象は顧客の気恥ずかしい購買場面なので、同僚間の質問への適用は類推である。"],"M")
+),
+H(["① 묻는 일의 감정 비용 — 나라마다 다르게 나타난다","1. The emotional cost of asking — it differs by country","① Эмоциональная цена вопроса — в разных странах она разная","① 提问的情绪成本——各国表现不同","① 聞くことの感情コスト――国によって表れ方が違う"]),
+P(
+ s("C",[43],["한국 AI 커뮤니티 이용자 5,586명(직장인 62%) 조사에서 모르는 것이 생겼을 때 사람보다 AI에게 묻는 것이 더 편하다는 응답은 72.4%로, 사람에게 묻는 것이 더 편하다는 응답(5.4%)의 13배를 넘었다.",
+  "In a survey of 5,586 users of a Korean AI community (62% employees), 72.4% said that when they don't know something it is easier to ask AI than a person — more than 13 times the 5.4% who found asking a person easier.",
+  "В опросе 5586 пользователей корейского ИИ-сообщества (62% — наёмные работники) 72,4% ответили, что, когда чего-то не знают, им проще спросить ИИ, чем человека, — более чем в 13 раз больше, чем тех, кому проще спросить человека (5,4%).",
+  "在对韩国某AI社区5,586名用户（上班族占62%）的调查中，72.4%表示遇到不懂的事时问AI比问人更自在，是“问人更自在”（5.4%）的13倍以上。",
+  "韓国のAIコミュニティ利用者5,586人（会社員62%）の調査では、わからないことがあるとき人よりAIに聞く方が気楽だという回答が72.4%で、人に聞く方が気楽という回答（5.4%）の13倍を超えた。"],
+  ["AI를 즐겨 쓰는 커뮤니티 이용자 표본이라 크기는 과대 추정되었을 수 있다.","The sample of AI-community users who like AI may overstate the size.","Выборка пользователей ИИ-сообщества может завышать величину.","样本为爱用AI的社区用户，数值可能被高估。","AIを好む利用者の標本なので大きさは過大かもしれない。"],"M"),
+ s("C",[43],["이유는 정확성이 아니라 눈치였다: '바쁜 사람 눈치를 안 봐도 돼서'(31.3%), '기초적인 질문도 부끄럽지 않아서'(27.3%), '핀잔이나 잔소리를 안 들어도 돼서'(6.9%)를 합하면 65.5%였고, 'AI가 사람보다 정확해서'는 5.1%에 그쳤다.",
+  "The reason was not accuracy but social anxiety: 'no need to read a busy person's mood' (31.3%), 'not embarrassed to ask even basic questions' (27.3%) and 'no scolding or nagging' (6.9%) together made up 65.5%, while 'AI is more accurate than people' was only 5.1%.",
+  "Причина — не точность, а оглядка на других: «не нужно ловить настроение занятого человека» (31,3%), «не стыдно задавать даже простые вопросы» (27,3%) и «не услышишь упрёков и нотаций» (6,9%) в сумме дали 65,5%, а «ИИ точнее людей» — лишь 5,1%.",
+  "原因不是准确性，而是看人脸色：“不用看忙碌的人的脸色”（31.3%）、“问基础问题也不难为情”（27.3%）、“不会挨数落和唠叨”（6.9%）合计65.5%，而“AI比人更准确”仅占5.1%。",
+  "理由は正確さではなく気遣いだった。「忙しい人の顔色をうかがわなくていい」（31.3%）、「基本的な質問でも恥ずかしくない」（27.3%）、「小言やお説教を聞かなくていい」（6.9%）を合わせると65.5%で、「AIの方が人より正確」は5.1%にとどまった。"]),
+ s("C",[45],["일·미 취업자 2만 608명 조사에서 일의 고민을 가장 먼저 상의하는 상대는 일본에서는 동료와 상사(각 약 30%)가 앞서고 생성형 AI는 약 10%였지만, 미국에서는 생성형 AI가 상사와 함께 30%를 넘어 동료(20%대 초반)를 앞섰다.",
+  "In a survey of 20,608 workers in Japan and the US, the first person consulted about work worries in Japan was a colleague or boss (about 30% each), with generative AI at about 10%; in the US, generative AI, together with the boss, exceeded 30% and overtook colleagues (just over 20%).",
+  "В опросе 20 608 работников Японии и США первым, с кем советуются о рабочих проблемах, в Японии оказались коллега и начальник (около 30% каждый), а генеративный ИИ — около 10%; в США генеративный ИИ вместе с начальником превысил 30% и обогнал коллег (немногим более 20%).",
+  "在对日美20,608名在职者的调查中，日本人遇到工作烦恼时最先商量的对象是同事和上司（各约30%），生成式AI约为10%；而在美国，生成式AI与上司一样超过30%，超过了同事（20%出头）。",
+  "日米の就業者20,608人の調査では、仕事の悩みを最初に相談する相手は、日本では同僚と上司（各約3割）が上位で生成AIは約1割だったが、米国では生成AIが上司とともに3割を超え、同僚（2割強）を上回った。"]),
+ s("C",[45],["사람에게 상의하지 않는 이유로는 두 나라 모두 '상대에게 폐가 될 수 있어서'가 많았고, 일본은 '상의해도 바뀌지 않는다'는 체념이, 미국은 평가 영향이나 기밀 유출을 걱정하는 실무적 위험 회피가 두드러졌다.",
+  "As reasons for not consulting people, 'it might be a burden to them' was common in both countries; Japan stood out for resignation — 'nothing changes even if I ask' — and the US for practical risk avoidance, such as worry about effects on evaluations or leaks of confidential information.",
+  "Среди причин не советоваться с людьми в обеих странах часто называли «могу доставить человеку неудобство»; в Японии выделялась покорность — «ничего не изменится, даже если спрошу», — а в США практическое избегание рисков, например страх повлиять на оценку или допустить утечку конфиденциальной информации.",
+  "关于不找人商量的理由，两国都常见“可能给对方添麻烦”；日本突出的是“商量了也不会改变”的无奈，美国突出的则是担心影响考评或泄露机密等务实的风险回避。",
+  "人に相談しない理由としては、両国とも「相手に迷惑がかかるかもしれない」が多く、日本では「相談しても変わらない」というあきらめが、米国では評価への影響や機密漏洩を心配する実務的なリスク回避が目立った。"]),
+ s("C",[46],["일본 20대 회사원 595명 조사에서는 26.5%가 커리어의 속마음을 털어놓을 상대로 직속 상사보다 생성형 AI를 더 신뢰한다고 답했고, 사내 상담 창구가 '형식만 있고 실제로는 쓰기 어렵다'는 응답도 35.1%였다.",
+  "In a survey of 595 Japanese company employees in their twenties, 26.5% said they trust generative AI more than their direct boss as someone to confide in about their career, and 35.1% said the internal consultation system 'exists in form but is hard to use in practice'.",
+  "В опросе 595 японских сотрудников компаний в возрасте 20–29 лет 26,5% ответили, что доверяют генеративному ИИ больше, чем непосредственному начальнику, когда хотят откровенно поговорить о карьере, а 35,1% — что внутренняя система консультаций «есть формально, но на деле ею трудно пользоваться».",
+  "在对日本595名20多岁公司职员的调查中，26.5%表示在吐露职业真心话时，比起直属上司更信任生成式AI；还有35.1%表示公司的咨询渠道“形式上有，实际上难以使用”。",
+  "日本の20代会社員595人の調査では、26.5%がキャリアの本音を話せる相手として直属の上司より生成AIを信頼すると答え、社内の相談体制が「形としてはあるが実際には利用しにくい」という回答も35.1%あった。"]),
+ s("C",[47],["반면 31개 시장 지식노동자 3만 1천 명 조사에서 동료 대신 AI를 찾은 이유는 24시간 이용 가능(42%), 속도와 품질(30%), 무한한 아이디어(28%)가 중심이었고, 조급함·설명 요구·평가 같은 '사람의 특성'을 피하려는 이유는 가장 낮았다.",
+  "By contrast, in a survey of 31,000 knowledge workers in 31 markets, the main reasons for turning to AI instead of a colleague were 24/7 availability (42%), speed and quality (30%) and unlimited ideas (28%), while reasons of avoiding human traits — impatience, the need for explanation, judgement — ranked lowest.",
+  "Напротив, в опросе 31 000 работников умственного труда на 31 рынке главными причинами обращаться к ИИ вместо коллеги были круглосуточная доступность (42%), скорость и качество (30%) и неограниченные идеи (28%), а желание избежать человеческих черт — нетерпения, необходимости объяснять, оценки — оказалось на последнем месте.",
+  "相比之下，在对31个市场3.1万名知识工作者的调查中，用AI代替同事的主要理由是全天候可用（42%）、速度与质量（30%）和无限的点子（28%），而为回避急躁、需要解释、评判等“人的特性”的理由排名最低。",
+  "一方、31市場の知識労働者3万1千人の調査では、同僚の代わりにAIを使う理由は24時間使える（42%）、速さと質（30%）、尽きないアイデア（28%）が中心で、せっかちさ・説明の必要・評価といった「人の特性」を避けるための理由は最も低かった。"]),
+ s("D",[43,45,46,47],["종합하면 'AI에게 묻는 편안함'의 성격은 나라마다 다르다: 한국은 눈치와 체면(평가 회피), 일본은 '말해도 소용없다'는 체념과 폐를 끼치기 싫은 마음, 미국은 위험 회피와 효율, 31개 시장 평균은 효율(24시간·속도)이 앞서며 — 한국 조사에서 '해방감'이 가장 두드러지는 것도 이 때문으로 보인다.",
+  "Taken together, the comfort of asking AI has a different character in each country: in Korea, social anxiety and face (avoiding judgement); in Japan, resignation that speaking up is pointless and reluctance to impose; in the US, risk avoidance and efficiency; and on the 31-market average, efficiency (24/7, speed) — which seems to be why the sense of relief stands out most in the Korean survey.",
+  "В целом «удобство спросить ИИ» имеет в каждой стране свой характер: в Корее — оглядка на других и сохранение лица (избежать оценки), в Японии — покорность («говорить бесполезно») и нежелание обременять, в США — избегание рисков и эффективность, а в среднем по 31 рынку — эффективность (круглосуточно, быстро); видимо, поэтому чувство облегчения сильнее всего выражено в корейском опросе.",
+  "综合来看，“问AI的自在”在各国性质不同：韩国是看脸色和面子（回避评判），日本是“说了也没用”的无奈和不愿添麻烦，美国是风险回避与效率，31个市场平均则以效率（全天候、速度）为先——这似乎正是韩国调查中“解脱感”最突出的原因。",
+  "まとめると、「AIに聞く気楽さ」の性格は国ごとに異なる。韓国は気遣いと体面（評価の回避）、日本は「言っても無駄」というあきらめと迷惑をかけたくない気持ち、米国はリスク回避と効率、31市場平均は効率（24時間・速さ）が前に出る――韓国の調査で「解放感」が最も際立つのもこのためとみられる。"],
+  ["표본과 문항이 서로 다른 조사를 비교한 판단이므로, 수치의 크기가 아니라 이유의 구성만 비교했다.","A judgement comparing surveys with different samples and questions, so only the mix of reasons is compared, not the size of figures.","Суждение сравнивает опросы с разными выборками и вопросами, поэтому сопоставляется только структура причин, а не величины.","此判断比较的是样本与问题各异的调查，只比较理由构成，不比较数值大小。","標本と設問が異なる調査を比べた判断なので、数値の大きさではなく理由の構成だけを比べた。"],"M")
+),
+CH("ask"),
+H(["② AI가 '사수'가 될 때 — 업종·기업별 현장 증거","2. When AI becomes the senior — field evidence by industry and company","② Когда ИИ становится наставником — данные по отраслям и компаниям","② 当AI成为“师傅”——分行业、分企业的现场证据","② AIが「先輩」になるとき――業種・企業別の現場の証拠"]),
+P(
+ s("A",[29],["한 소프트웨어 기업의 고객지원 상담원 5,179명을 다룬 현장 연구에서 AI 보조의 이득은 초보·저숙련 상담원에게 가장 컸고(34%), 연구진은 AI가 숙련자의 모범 사례를 퍼뜨려 신입이 경험 곡선을 더 빨리 내려가도록 돕는다는 시사적 증거를 제시했다 — AI가 '사수' 역할을 한 셈이다.",
+  "In a field study of 5,179 customer-support agents at a software company, the gains from AI assistance were largest for novice and low-skilled agents (34%), and the researchers presented suggestive evidence that the AI spreads the best practices of more able workers and helps newer workers move down the experience curve — in effect, AI acted as the senior.",
+  "В полевом исследовании 5179 операторов поддержки клиентов одной компании-разработчика ПО выигрыш от помощи ИИ был максимальным у новичков и низкоквалифицированных операторов (34%), а исследователи привели предварительные свидетельства того, что ИИ распространяет лучшие практики более умелых работников и помогает новичкам быстрее проходить кривую опыта, — по сути, ИИ сыграл роль наставника.",
+  "在对某软件企业5,179名客服人员的现场研究中，AI辅助的收益在新手和低技能客服身上最大（34%），研究者还提供了提示性证据：AI传播了能干员工的最佳做法，帮助新人更快走过经验曲线——AI实际上扮演了“师傅”。",
+  "あるソフトウェア企業の顧客サポート担当者5,179人の現場研究では、AI支援の効果は初心者・低スキルの担当者で最も大きく（34%）、研究者はAIが熟練者のベストプラクティスを広め、新人が経験曲線を早く下るのを助けるという示唆的な証拠を示した――AIが「先輩」の役割を果たしたことになる。"]),
+ s("B",[54],["소비재 기업 P&G의 전문가 776명을 무작위 배정한 현장 실험에서는 AI와 혼자 일한 사람이 AI 없는 2인 팀과 같은 성과를 냈고, AI 사용자는 더 긍정적인 정서를 보고해 AI가 팀 동료가 주던 사회적·동기적 역할의 일부를 대신할 수 있음을 시사했다.",
+  "In a field experiment that randomly assigned 776 professionals at the consumer-goods company P&G, individuals working with AI matched the performance of two-person teams without AI, and AI users reported more positive emotions, suggesting that AI can take over part of the social and motivational role that teammates used to provide.",
+  "В полевом эксперименте со случайным распределением 776 специалистов компании потребительских товаров P&G работавшие в одиночку с ИИ показали результаты на уровне команд из двух человек без ИИ, а пользователи ИИ сообщали о более позитивных эмоциях — это говорит о том, что ИИ может взять на себя часть социальной и мотивационной роли коллег по команде.",
+  "在对消费品企业宝洁776名专业人员随机分组的现场实验中，与AI单独工作的人达到了无AI两人团队的水平，AI使用者报告的正面情绪也更多，表明AI可以替代团队同事原本提供的部分社交与激励作用。",
+  "消費財企業P&Gの専門職776人を無作為に割り当てたフィールド実験では、AIと一人で働いた人がAIなしの2人チームと同等の成果を出し、AI利用者はより前向きな感情を報告して、AIがチームの同僚が担っていた社会的・動機づけの役割の一部を代わりうることを示唆した。"]),
+ s("A",[56],["개발자 업계에서는 ChatGPT 이후 공개 질의응답 사이트 스택오버플로의 활동이 약 25% 줄었고, 감소는 초보부터 전문가까지 모든 경력 수준에서 나타났다.",
+  "In software development, activity on the public Q&A site Stack Overflow fell by about 25% after ChatGPT, and the decline appeared at every experience level, from novices to experts.",
+  "В разработке ПО активность на публичном сайте вопросов и ответов Stack Overflow после появления ChatGPT снизилась примерно на 25%, причём спад наблюдался на всех уровнях опыта — от новичков до экспертов.",
+  "在软件开发领域，ChatGPT问世后公开问答网站Stack Overflow的活跃度下降约25%，且从新手到专家各个经验层级都出现了下降。",
+  "ソフトウェア開発では、ChatGPT以降、公開Q&AサイトStack Overflowの活動が約25%減り、減少は初心者から専門家まですべての経験レベルで見られた。"]),
+ s("B",[57],["GitHub Copilot을 쓴 개발자 18만 7천여 명을 분석한 연구에서는 문제가 생겼을 때 동료에게 조언을 구하는 대신 Copilot에 묻는 쪽으로 바뀌면서 관리 업무가 줄고 독립적 작업이 늘었으며, 연구진은 이것이 멘토링 기회를 제한할 수 있다고 경고했다.",
+  "A study of more than 187,000 developers using GitHub Copilot found that, when they hit problems, they turned to Copilot instead of seeking advice from peers, so managerial tasks shrank and independent work grew — and the researchers warned this could limit opportunities for mentorship.",
+  "Исследование более 187 000 разработчиков, пользующихся GitHub Copilot, показало: столкнувшись с проблемой, они обращались к Copilot, а не за советом к коллегам, поэтому доля управленческих задач сократилась, а самостоятельной работы выросла; исследователи предупредили, что это может ограничить возможности наставничества.",
+  "一项分析18.7万余名使用GitHub Copilot的开发者的研究发现，遇到问题时他们转而问Copilot，而不是向同事求教，于是管理性工作减少、独立工作增加；研究者警告这可能限制带教机会。",
+  "GitHub Copilotを使う開発者18万7千人余りを分析した研究では、問題が起きたとき同僚に助言を求める代わりにCopilotに聞くようになり、管理業務が減って独立した作業が増え、研究者はこれがメンタリングの機会を狭めうると警告した。"]),
+ s("D",[29,54,56,57],["업종별로 보면 '묻는 대화'가 가장 먼저 AI로 옮겨 가는 곳은 답이 비교적 분명한 코딩·고객 상담 같은 정보 업무이며, 개인의 질문 비용이 줄어드는 대신 공개 지식 공유와 동료 사이의 학습 기회가 줄어드는 형태로 대가가 나타난다.",
+  "By industry, 'asking conversations' move to AI first in information work with relatively clear answers, such as coding and customer support; the individual's cost of asking falls, but the price shows up as less public knowledge-sharing and fewer chances to learn from colleagues.",
+  "По отраслям «разговоры-вопросы» раньше всего уходят к ИИ в информационной работе с относительно ясными ответами — программировании и поддержке клиентов; личная цена вопроса снижается, но расплатой становится сокращение публичного обмена знаниями и возможностей учиться у коллег.",
+  "按行业看，“提问式对话”最先转向AI的是答案相对明确的信息型工作，如编程和客服；个人的提问成本下降了，代价则表现为公开知识共享与同事间学习机会的减少。",
+  "業種別に見ると、「聞く会話」が最初にAIへ移るのは、答えが比較的はっきりしたコーディングや顧客サポートのような情報業務であり、個人の質問コストが下がる代わりに、公開の知識共有と同僚から学ぶ機会が減るという形で代価が現れる。"],null,"M")
+),
+H(["③ 줄어드는 대화의 대가 — 외로움과 '숨기는 감정노동'","3. The price of fewer conversations — loneliness and the emotional labour of hiding","③ Цена исчезающих разговоров — одиночество и эмоциональный труд сокрытия","③ 对话减少的代价——孤独与“隐瞒型情绪劳动”","③ 減る会話の代価――孤独と「隠す感情労働」"]),
+P(
+ s("A",[55],["대만·인도네시아·미국·말레이시아 노동자 794명을 다룬 네 개 연구에서 업무상 AI와 상호작용이 많을수록 외로움이 커지고 퇴근 후 불면과 음주가 늘었으며, 동시에 동료를 돕는 행동도 늘어 '사람과 연결되고 싶은 욕구'가 커지는 양면이 확인되었다.",
+  "Four studies covering 794 workers in Taiwan, Indonesia, the US and Malaysia found that the more employees interacted with AI at work, the lonelier they felt and the more insomnia and drinking they reported after work — yet they also helped colleagues more, revealing both sides of a growing need to connect with people.",
+  "Четыре исследования 794 работников Тайваня, Индонезии, США и Малайзии показали: чем больше сотрудники взаимодействовали с ИИ на работе, тем сильнее было одиночество и тем больше бессонницы и алкоголя после работы, — но они же чаще помогали коллегам, что выявило обе стороны растущей потребности в связи с людьми.",
+  "四项涉及台湾、印度尼西亚、美国和马来西亚794名员工的研究发现，工作中与AI互动越多，孤独感越强，下班后失眠和饮酒也越多；但与此同时帮助同事的行为也增加了，呈现出“想与人连接”的需求增强的两面。",
+  "台湾・インドネシア・米国・マレーシアの労働者794人を扱った四つの研究では、仕事でAIとのやり取りが多いほど孤独感が強まり、退勤後の不眠と飲酒が増えた一方、同僚を助ける行動も増え、「人とつながりたい」欲求が高まる両面が確かめられた。"],
+  ["생성형 AI 이전의 업무용 AI 시스템을 다루며 일부 결과는 상관관계다.","It concerns workplace AI systems from before generative AI, and some results are correlational.","Речь о рабочих ИИ-системах до генеративного ИИ; часть результатов корреляционная.","研究的是生成式AI之前的工作用AI系统，部分结果属相关关系。","生成AI以前の業務用AIシステムを扱い、一部の結果は相関関係である。"],"M"),
+ s("B",[8,9,10,11,12,13],["갤럽 2025년 자료에서 전날 외로움을 많이 느낀 직장인은 중국 25%, 미국 19%, 영국 18%, 한국 15%, 독일 12%, 일본 11%로, 한국과 일본은 세계 평균(22%)과 동아시아 평균(23%)보다 낮았다.",
+  "In Gallup's 2025 data, the share of employees who felt a lot of loneliness the previous day was 25% in China, 19% in the US, 18% in the UK, 15% in Korea, 12% in Germany and 11% in Japan — Korea and Japan below both the global (22%) and East Asian (23%) averages.",
+  "По данным Gallup за 2025 год, доля работников, сильно испытывавших одиночество накануне, составила 25% в Китае, 19% в США, 18% в Великобритании, 15% в Корее, 12% в Германии и 11% в Японии; Корея и Япония ниже и мирового (22%), и восточноазиатского (23%) среднего.",
+  "盖洛普2025年数据显示，前一天感到很孤独的员工比例为中国25%、美国19%、英国18%、韩国15%、德国12%、日本11%，韩国和日本低于全球平均（22%）和东亚平均（23%）。",
+  "ギャラップの2025年データで、前日に強い孤独を感じた従業員は中国25%、米国19%、英国18%、韓国15%、ドイツ12%、日本11%で、韓国と日本は世界平均（22%）と東アジア平均（23%）を下回った。"]),
+ s("D",[55,8,9],["한·일의 낮은 외로움 응답은 대면 중심 조직 문화의 완충일 수도, 감정 표현을 억제하는 응답 문화일 수도 있으며, AI가 동료와의 대화를 대신하기 시작할 때 이 수치가 어느 쪽으로 움직일지는 아직 관측되지 않았다.",
+  "The low loneliness figures in Korea and Japan may reflect the buffer of face-to-face organisational cultures or a response culture that suppresses emotional expression; which way they will move once AI starts replacing conversations with colleagues has not yet been observed.",
+  "Низкие показатели одиночества в Корее и Японии могут отражать буфер очной организационной культуры или культуру ответов, сдерживающую выражение эмоций; куда они сдвинутся, когда ИИ начнёт заменять разговоры с коллегами, пока не наблюдалось.",
+  "韩日较低的孤独比例，可能反映了以面对面为主的组织文化的缓冲，也可能是抑制情绪表达的作答文化；当AI开始取代与同事的对话时，这一数字会朝哪个方向变化，目前尚无观测。",
+  "韓日の低い孤独の回答は、対面中心の組織文化の緩衝かもしれないし、感情表現を抑える回答文化かもしれず、AIが同僚との会話を代わり始めたとき、この数値がどちらへ動くかはまだ観測されていない。"],null,"L"),
+ s("A",[50],["4,400여 명이 참여한 네 개 실험에서 AI의 도움을 받은 사람은 다른 방식의 도움을 받은 사람보다 더 게으르고 덜 유능하며 덜 성실하다고 평가받았고, 당사자도 그렇게 평가받을 것이라고 예상했다.",
+  "In four experiments with more than 4,400 participants, people who got help from AI were judged lazier, less competent and less diligent than those who got other kinds of help — and they themselves expected to be judged that way.",
+  "В четырёх экспериментах с более чем 4400 участниками тех, кто получал помощь ИИ, считали более ленивыми, менее компетентными и менее старательными, чем получавших помощь иного рода, — и сами они ожидали такой оценки.",
+  "在4,400余人参与的四项实验中，借助AI的人比获得其他形式帮助的人被评价为更懒惰、能力更差、更不勤勉，当事人自己也预料会得到这样的评价。",
+  "4,400人余りが参加した四つの実験で、AIの助けを得た人は他の形の助けを得た人より怠惰で有能さに欠け、勤勉でないと評価され、本人もそう評価されると予想していた。"]),
+ s("C",[48],["데스크 노동자 1만 7천여 명 조사에서 48%는 일상 업무에 AI를 쓴 사실을 상사에게 밝히기 불편하다고 답했고, 주된 이유는 '부정행위 같아서', '능력이 부족해 보일까 봐', '게을러 보일까 봐'였다.",
+  "In a survey of more than 17,000 desk workers, 48% said they would be uncomfortable admitting to their manager that they used AI for common tasks, mainly because it felt like cheating or they feared looking less competent or lazy.",
+  "В опросе более 17 000 офисных работников 48% сказали, что им было бы неловко признаться руководителю в использовании ИИ для обычных задач, — прежде всего потому, что это похоже на жульничество или они боятся показаться менее компетентными или ленивыми.",
+  "在对1.7万余名办公室员工的调查中，48%表示向上司承认在日常工作中用了AI会感到不自在，主要原因是“感觉像作弊”“怕显得能力不足”“怕显得懒惰”。",
+  "1万7千人余りのデスクワーカーの調査で、48%は日常業務にAIを使ったことを上司に打ち明けるのは抵抗があると答え、主な理由は「不正行為のように感じる」「能力不足と見られるおそれ」「怠惰に見られるおそれ」だった。"]),
+ s("B",[49,43],["47개국 4만 8천여 명 조사에서는 직장인의 57%가 AI 사용을 숨기고 AI가 만든 결과물을 자기 것처럼 제출한다고 답했고, 한국 AI 이용자 조사에서도 직장인 응답자의 74.6%가 AI 결과물을 별도 언급 없이 직접 한 것처럼 제출·보고한 경험이 있었다.",
+  "In a survey of more than 48,000 people in 47 countries, 57% of employees said they hide their use of AI and present AI-generated work as their own, and in the Korean AI-user survey 74.6% of employee respondents had submitted or reported AI output as their own work without mentioning AI.",
+  "В опросе более 48 000 человек в 47 странах 57% работников ответили, что скрывают использование ИИ и выдают созданное им за своё, а в корейском опросе пользователей ИИ 74,6% респондентов-работников сдавали или докладывали результаты ИИ как собственную работу, не упоминая ИИ.",
+  "在对47国4.8万余人的调查中，57%的员工表示会隐瞒使用AI并把AI生成的成果当作自己的提交；韩国AI用户调查中，74.6%的上班族受访者也有过不加说明地把AI成果当作自己完成的来提交或汇报的经历。",
+  "47か国4万8千人余りの調査では従業員の57%がAI利用を隠し、AIが作った成果物を自分のものとして出していると答え、韓国のAI利用者調査でも会社員回答者の74.6%がAIの成果物をことわりなく自分でやったように提出・報告した経験があった。"],
+  ["74.6%는 C급 커뮤니티 조사여서 크기보다 방향을 보는 용도다.","The 74.6% comes from a grade-C community survey and indicates direction rather than size.","74,6% — из опроса сообщества класса C и показывает направление, а не величину.","74.6%来自C级社区调查，用于看方向而非大小。","74.6%はC級のコミュニティ調査なので、大きさより方向を見るためのものである。"],"M"),
+ s("D",[50,48,49,43],["결국 '물어볼 때의 감정노동'은 사라지기보다 모양을 바꾼다: 핀잔을 피해 AI에게 물은 사람은 이제 AI를 썼다는 사실이 드러날까 봐 관리하는 '숨기는 감정노동'을 떠안는다.",
+  "In the end, the emotional labour of asking changes shape rather than disappearing: the person who asked AI to avoid a put-down now carries the emotional labour of hiding — managing the risk that their AI use will come to light.",
+  "В итоге эмоциональный труд вопроса не исчезает, а меняет форму: тот, кто спросил ИИ, чтобы избежать упрёка, теперь несёт эмоциональный труд сокрытия — следит, чтобы не открылось, что он пользовался ИИ.",
+  "归根结底，“提问时的情绪劳动”并未消失，而是换了形态：为躲开数落而问AI的人，如今要承担“隐瞒型情绪劳动”——提防自己用了AI的事被发现。",
+  "結局、「聞くときの感情労働」は消えるのではなく形を変える。小言を避けてAIに聞いた人は、今度はAIを使ったことがばれないよう気を配る「隠す感情労働」を背負う。"],null,"H")
+),
+H(["④ AI는 감정의 대리 판단자·중재자가 될 수 있나","4. Can AI be an emotional proxy and mediator?","④ Может ли ИИ быть эмоциональным посредником и «судить за нас»?","④ AI能否成为情绪上的代理判断者与调解者？","④ AIは感情の代理判断者・仲介者になれるか"]),
+P(
+ s("A",[52],["AI 답장 추천을 쓰게 한 무작위 실험에서 대화는 빨라지고 긍정적 감정 표현이 늘었으며 서로를 더 가깝고 협조적으로 평가했지만, AI 답장을 쓴다고 의심받은 사람은 더 부정적으로 평가받았다.",
+  "In randomised experiments with AI reply suggestions, conversations became faster, positive emotional language increased and partners rated each other as closer and more cooperative — but people suspected of using AI replies were evaluated more negatively.",
+  "В рандомизированных экспериментах с подсказками ответов ИИ разговоры шли быстрее, позитивных эмоциональных выражений стало больше, а собеседники оценивали друг друга как более близких и склонных к сотрудничеству, — но тех, кого подозревали в использовании ответов ИИ, оценивали хуже.",
+  "在使用AI回复建议的随机实验中，对话变快、正面情绪表达增多，双方也觉得彼此更亲近、更合作；但被怀疑使用AI回复的人得到的评价更负面。",
+  "AIの返信候補を使わせたランダム化実験では、会話が速くなり前向きな感情表現が増え、互いをより親しく協力的だと評価したが、AIの返信を使っていると疑われた人はより否定的に評価された。"]),
+ s("A",[53],["영국 참가자 5,734명이 참여한 숙의 실험에서 참가자들은 AI 중재자가 쓴 합의문을 사람 중재자가 쓴 것보다 선호했고, 더 유익하고 명확하며 덜 편향적이라고 평가했다.",
+  "In deliberation experiments with 5,734 UK participants, people preferred group statements written by an AI mediator to those by human mediators, rating them more informative, clear and unbiased.",
+  "В экспериментах по обсуждению с 5734 участниками из Великобритании люди предпочитали общие заявления, написанные ИИ-посредником, заявлениям посредников-людей и оценивали их как более информативные, ясные и непредвзятые.",
+  "在有5,734名英国参与者的审议实验中，人们更喜欢AI调解员撰写的共识声明而非人类调解员所写，认为其更有信息量、更清晰、更不偏颇。",
+  "英国の5,734人が参加した熟議実験では、参加者はAI仲介者が書いた合意文を人の仲介者が書いたものより好み、より有益で明確で偏りが少ないと評価した。"],
+  ["정치 쟁점의 숙의 실험이므로 직장 갈등 중재로의 확장은 유추다.","It is a deliberation experiment on political issues, so extending it to workplace conflict is an analogy.","Это эксперимент по обсуждению политических вопросов, поэтому перенос на рабочие конфликты — аналогия.","这是政治议题的审议实验，推及职场冲突属类比。","政治的争点の熟議実験なので、職場の対立への拡張は類推である。"],"M"),
+ s("C",[33],["고객 응대에서도 같은 원리가 쓰인다: 화난 고객의 음성 톤만 부드럽게 바꾸는 AI는 감정을 사람 대신 한 번 걸러 주는 '완충 중재자'다.",
+  "The same principle is used in customer service: AI that softens only the tone of an angry customer's voice is a 'buffer mediator' that filters emotion once on the worker's behalf.",
+  "Тот же принцип применяется в обслуживании клиентов: ИИ, смягчающий лишь тон голоса рассерженного клиента, — это «буферный посредник», который один раз фильтрует эмоции вместо работника.",
+  "客户服务中也用到同样的原理：只把愤怒顾客的语气变柔和的AI，是替员工先过滤一遍情绪的“缓冲调解者”。",
+  "顧客応対でも同じ原理が使われる。怒った顧客の声のトーンだけを和らげるAIは、感情を人の代わりに一度こしとる「緩衝の仲介者」である。"]),
+ s("C",[44],["한국의 대화형 AI 이용자 1,000명 가운데 57.1%가 AI에게 개인적인 고민이나 감정을 털어놓은 적이 있었고, 20대는 67.6%로 가장 높았다.",
+  "Among 1,000 conversational-AI users in Korea, 57.1% had told AI about personal worries or feelings, highest among people in their twenties (67.6%).",
+  "Из 1000 пользователей диалогового ИИ в Корее 57,1% делились с ИИ личными переживаниями или чувствами; выше всего доля среди 20–29-летних (67,6%).",
+  "在韩国1,000名对话式AI用户中，57.1%曾向AI倾诉个人烦恼或情感，20多岁人群最高，为67.6%。",
+  "韓国の対話型AI利用者1,000人のうち57.1%がAIに個人的な悩みや気持ちを打ち明けたことがあり、20代が67.6%で最も高かった。"]),
+ s("D",[51,52,53],["AI가 감정의 대리 판단자·중재자로 편안한 이유는 셋으로 정리된다: 평가하지 않는다(체면 보호), 감정을 한 번 걸러 준다(톤 완화), 서로의 말을 정리해 공통점을 찾는다(합의문 작성) — 다만 그 효과는 AI가 끼어들었다는 사실이 드러나는 순간 약해진다.",
+  "AI is comfortable as an emotional proxy and mediator for three reasons: it does not judge (protecting face), it filters emotion once (softening tone), and it organises what each side says to find common ground (drafting statements) — though the effect weakens the moment AI's involvement becomes visible.",
+  "ИИ удобен как эмоциональный посредник по трём причинам: он не оценивает (сохранение лица), один раз фильтрует эмоции (смягчение тона) и упорядочивает сказанное сторонами, находя общее (составление заявлений), — но эффект слабеет, как только участие ИИ становится заметным.",
+  "AI之所以让人觉得适合充当情绪上的代理判断者与调解者，可归结为三点：不评判（保住面子）、先过滤一遍情绪（缓和语气）、整理各方说法找出共同点（起草共识）——但一旦AI的介入被察觉，这种效果就会减弱。",
+  "AIが感情の代理判断者・仲介者として気楽な理由は三つにまとめられる。評価しない（体面を守る）、感情を一度こしとる（トーンを和らげる）、互いの言い分を整理して共通点を探す（合意文を書く）――ただしその効果は、AIが介在したことが見えた瞬間に弱まる。"],null,"M")
+),
+H(["⑤ 책이 말하는 것 — 대화, 숨은 노동, 그리고 '접근'의 문제","5. What the books argue — conversation, hidden labour and the question of access","⑤ Что говорят книги — разговор, скрытый труд и вопрос доступа","⑤ 书里怎么说——对话、隐形劳动与“准入”问题","⑤ 本が語ること――会話、見えない労働、そして「アクセス」の問題"]),
+P(
+ s("B",[59],["MIT의 셰리 터클은 『Reclaiming Conversation』(2015)에서 우리가 단순한 '연결'을 위해 '대화'를 희생했다고 진단하고, 얼굴을 맞댄 대화가 공감·우정·창의성을 기르며 일터의 생산성과 몰입에도 이롭다고 주장한다.",
+  "MIT's Sherry Turkle, in Reclaiming Conversation (2015), diagnoses that we have sacrificed conversation for mere connection and argues that face-to-face talk builds empathy, friendship and creativity and is good for workplace productivity and engagement.",
+  "Шерри Тёркл из MIT в книге «Reclaiming Conversation» (2015) констатирует, что мы пожертвовали разговором ради простой связи, и утверждает, что живой разговор развивает эмпатию, дружбу и творчество и полезен для продуктивности и вовлечённости на работе.",
+  "麻省理工学院的雪莉·特克尔在《Reclaiming Conversation》（2015）中指出，我们为了单纯的“连接”牺牲了“对话”，并主张面对面交谈能培养共情、友谊和创造力，也有益于职场的生产力与投入。",
+  "MITのシェリー・タークルは『Reclaiming Conversation』（2015）で、私たちは単なる「つながり」のために「会話」を犠牲にしたと診断し、顔を合わせた会話が共感・友情・創造性を育て、職場の生産性と没入にも役立つと主張する。"],
+  ["스마트폰 시대를 다룬 책으로 생성형 AI 이전에 쓰였다.","The book addresses the smartphone era and predates generative AI.","Книга посвящена эпохе смартфонов и написана до генеративного ИИ.","该书针对智能手机时代，写于生成式AI之前。","スマートフォン時代を扱った本で、生成AI以前に書かれた。"],"M"),
+ s("B",[60,58],["메리 그레이와 시다스 수리는 『Ghost Work』(2019)에서 자동화된 것처럼 보이는 디지털 서비스를 떠받치는 보이지 않는 사람의 노동을 드러냈는데, 조경숙이 6장에서 던지는 '기계의 윤리적 태도를 위해 희생되는 건 누구일까'라는 질문도 같은 구조를 겨눈다.",
+  "Mary Gray and Siddharth Suri, in Ghost Work (2019), exposed the invisible human labour that props up apparently automated digital services; Cho Kyung-sook's question in Chapter 6 — who is sacrificed for the machine's ethical manners? — targets the same structure.",
+  "Мэри Грей и Сиддхарт Сури в книге «Ghost Work» (2019) показали невидимый человеческий труд, на котором держатся будто бы автоматизированные цифровые сервисы; вопрос Чо Кёнсук в главе 6 — кем жертвуют ради этичного поведения машины? — нацелен на ту же структуру.",
+  "玛丽·格雷与西达尔特·苏里在《Ghost Work》（2019）中揭示了支撑看似自动化的数字服务的隐形人力劳动；조경숙（Cho Kyung-sook）在第6章提出的“为了机器的伦理姿态，牺牲的是谁？”也指向同一结构。",
+  "メアリー・グレイとシッダールト・スリは『Ghost Work』（2019）で、自動化されたように見えるデジタルサービスを支える見えない人間の労働を明らかにしたが、チョ・ギョンスクが第6章で投げかける「機械の倫理的態度のために犠牲になるのは誰か」という問いも同じ構造を狙っている。"]),
+ s("C",[58],["조경숙의 책 출판사 서평은 '안전한 챗봇'이 혐오 표현을 걸러내는 데이터 레이블링에 동원된 제3세계 노동자와, 챗봇을 쓰며 상처받는 폭력·소수자성에 민감한 사람들의 희생 위에서 가능해진다는 점을 짚는다.",
+  "The publisher's review of Cho's book points out that a 'safe chatbot' becomes possible on the backs of Global South workers mobilised for the data labelling that filters hate speech, and of people sensitive to violence and minority status who are hurt while using chatbots.",
+  "Издательская аннотация к книге Чо подчёркивает, что «безопасный чат-бот» становится возможен ценой работников стран глобального Юга, привлечённых к разметке данных для фильтрации языка вражды, и людей, чувствительных к насилию и положению меньшинств, которых ранит общение с чат-ботами.",
+  "该书的出版社书评指出，“安全的聊天机器人”之所以可能，是建立在被动员去做过滤仇恨言论的数据标注的第三世界劳动者，以及在使用聊天机器人时受到伤害、对暴力与少数群体处境敏感的人们的牺牲之上。",
+  "同書の出版社の書評は、「安全なチャットボット」が、ヘイト表現をこしとるデータラベリングに動員された第三世界の労働者と、チャットボットを使って傷つく、暴力やマイノリティ性に敏感な人々の犠牲の上に成り立つことを指摘する。"]),
+ s("D",[1,58,60],["혹실드의 감정노동 개념에 비추면 AI는 감정노동을 없애기보다 누가 그것을 떠맡는지를 바꾼다: 질문하는 사람의 민망함은 줄지만, 그 감정을 걸러내는 노동은 데이터 레이블러와 남은 상담원처럼 보이지 않는 곳으로 옮겨 간다.",
+  "In the light of Hochschild's concept, AI changes who carries emotional labour rather than eliminating it: the asker's embarrassment shrinks, but the labour of filtering emotion moves somewhere less visible — to data labellers and to the human agents who remain.",
+  "В свете концепции Хокшилд ИИ не устраняет эмоциональный труд, а меняет того, кто его несёт: неловкость спрашивающего уменьшается, но труд фильтрации эмоций уходит в менее заметные места — к разметчикам данных и оставшимся операторам-людям.",
+  "对照霍克希尔德的情绪劳动概念，AI与其说消除了情绪劳动，不如说改变了由谁来承担：提问者的难为情减少了，但过滤情绪的劳动转移到了看不见的地方——数据标注员和留下来的人工客服。",
+  "ホックシールドの感情労働の概念に照らせば、AIは感情労働をなくすより誰がそれを背負うかを変える。質問する人の気恥ずかしさは減るが、感情をこしとる労働はデータのラベラーや残った応対担当者のような見えにくい場所へ移る。"],null,"M"),
+ s("D",[58,59,57],["세 권을 겹쳐 읽은 본 보고서의 판단은 이렇다: 'AI 사수'는 독성 말투가 쌓은 질문의 문턱을 낮추는 실질적 해방이지만, 조직이 이를 문화를 고치지 않아도 되는 핑계로 쓰면 신입이 사람에게 배우고 연결될 기회 — 책 제목이 말하는 '액세스' — 는 오히려 더 닫힐 수 있다.",
+  "Reading the three books together, this report judges that the 'AI senior' is a real liberation that lowers the threshold for asking built up by toxic talk, but if organisations use it as an excuse not to fix their culture, newcomers' chances to learn from and connect with people — the 'access' of the book's title — may close even further.",
+  "Сопоставив три книги, доклад приходит к выводу: «ИИ-наставник» — реальное освобождение, снижающее порог для вопросов, выстроенный токсичным тоном, но если организации используют его как повод не менять культуру, возможности новичков учиться у людей и устанавливать связи — тот самый «доступ» из названия книги — могут закрыться ещё сильнее.",
+  "把三本书叠在一起读，本报告的判断是：“AI师傅”确实降低了毒舌文化筑起的提问门槛，是实实在在的解脱；但如果组织把它当作不必改变文化的借口，新人向人学习、与人建立联系的机会——即书名所说的“准入”——反而可能更加关闭。",
+  "三冊を重ねて読んだ本報告の判断はこうだ。「AIの先輩」は毒舌が積み上げた質問の敷居を下げる実質的な解放だが、組織がこれを文化を直さなくてよい口実にすれば、新人が人から学び人とつながる機会――書名のいう「アクセス」――はかえって閉ざされうる。"],null,"M")
+),
+TB("peers"),
+P(
+ s("C",[45],["AI가 사람 사이의 대화를 '줄이기만' 하는 것은 아니다: 일·미 조사에서 미국은 생성형 AI가 상의의 문턱을 낮춰 사람에게 상의하는 빈도도 늘어나는 경향을 보였고, 일본은 약 70%가 '변화 없음'이었다.",
+  "AI does not only reduce conversations between people: in the Japan–US survey, US workers tended to consult people more often as generative AI lowered the threshold for consulting, while about 70% in Japan reported no change.",
+  "ИИ не только сокращает разговоры между людьми: в японско-американском опросе в США генеративный ИИ, снизив порог для обращения за советом, сопровождался тенденцией чаще советоваться и с людьми, а в Японии около 70% не заметили изменений.",
+  "AI并非只会“减少”人与人之间的对话：在日美调查中，美国呈现出生成式AI降低商量门槛、找人商量的频率也随之增加的趋势，日本则约70%表示“没有变化”。",
+  "AIは人どうしの会話を「減らす」だけではない。日米調査では、米国で生成AIが相談の敷居を下げ人への相談頻度も増える傾向が見られ、日本では約7割が「変わらない」だった。"]),
+ s("D",[29,45,57],["따라서 관건은 AI가 사람 사이의 대화를 '대체'하느냐 '준비'시키느냐다: 기초 질문은 AI에게 묻고 맥락·판단·관계가 필요한 질문을 사람에게 가져가는 구조라면, 질문의 감정 비용은 줄고 사람 사이 대화의 질은 오히려 높아질 수 있다.",
+  "The key question is therefore whether AI replaces conversations between people or prepares people for them: if basic questions go to AI and questions needing context, judgement or relationships go to people, the emotional cost of asking can fall while the quality of human conversation rises.",
+  "Поэтому главный вопрос — заменяет ли ИИ разговоры между людьми или готовит к ним: если простые вопросы задаются ИИ, а вопросы, требующие контекста, суждения и отношений, — людям, эмоциональная цена вопроса может снизиться, а качество человеческих разговоров — даже вырасти.",
+  "因此关键在于AI是“取代”还是“铺垫”人与人之间的对话：如果基础问题问AI，需要语境、判断和关系的问题再找人，那么提问的情绪成本会下降，人与人对话的质量反而可能提高。",
+  "したがって鍵は、AIが人どうしの会話を「代替」するのか「準備」させるのかである。基本的な質問はAIに聞き、文脈・判断・関係が必要な質問を人に持っていく構造なら、質問の感情コストは下がり、人どうしの会話の質はむしろ高まりうる。"],null,"M"),
+ s("D",[43,46,57,58],["한국처럼 위계와 눈치가 강한 일터일수록 'AI 사수'의 해방감이 크지만, 같은 이유로 조직이 사람 사수와 멘토링을 줄이는 핑계로 삼을 위험도 크다 — 해방이 고립으로 바뀌지 않으려면 '물어도 되는 문화'와 'AI에게 먼저 물어도 되는 규범'이 함께 필요하다.",
+  "The stronger the hierarchy and social anxiety in a workplace, as in Korea, the greater the relief an 'AI senior' brings — and, for the same reason, the greater the risk that organisations use it as an excuse to cut human mentors and mentoring; for relief not to turn into isolation, a culture where asking is safe and a norm that asking AI first is acceptable are both needed.",
+  "Чем сильнее иерархия и оглядка на других на работе, как в Корее, тем больше облегчение от «ИИ-наставника» — и по той же причине тем выше риск, что организации используют его как повод сократить наставников-людей и наставничество; чтобы облегчение не обернулось изоляцией, нужны и культура, где спрашивать безопасно, и норма, что сначала спросить ИИ — нормально.",
+  "像韩国这样等级森严、讲究看脸色的职场，“AI师傅”带来的解脱感越大，但出于同样的原因，组织借此削减真人师傅和带教的风险也越大——要让解脱不变成孤立，既需要“可以放心提问的文化”，也需要“先问AI也无妨的规范”。",
+  "韓国のように上下関係と気遣いが強い職場ほど「AIの先輩」の解放感は大きいが、同じ理由で組織が人の先輩やメンタリングを減らす口実にする危険も大きい――解放が孤立に変わらないためには、「聞いてもいい文化」と「先にAIに聞いてもいい規範」の両方が必要だ。"],null,"M")
+)],
+[P(
+ s("C",[43],["한국 AI 이용자 조사에서 72.4%가 모르는 것을 사람보다 AI에게 묻는 게 편하다고 답했고, 이유는 합쳐서 65.5%가 정확성이 아니라 눈치·민망함·핀잔을 피하려는 것이었다.",
+  "In a Korean AI-user survey, 72.4% said it is easier to ask AI than a person about things they don't know, and the reasons — 65.5% combined — were about avoiding others' moods, embarrassment and put-downs, not accuracy.",
+  "В корейском опросе пользователей ИИ 72,4% ответили, что спрашивать о непонятном у ИИ проще, чем у человека, а причины — в сумме 65,5% — касались не точности, а желания избежать оглядки, неловкости и упрёков.",
+  "韩国AI用户调查中，72.4%表示不懂的事问AI比问人更自在，理由合计65.5%是为了回避看脸色、难为情和挨数落，而非准确性。",
+  "韓国のAI利用者調査では72.4%がわからないことは人よりAIに聞く方が気楽だと答え、理由は合わせて65.5%が正確さではなく気遣い・気恥ずかしさ・小言の回避だった。"]),
+ s("C",[45,47],["일본은 여전히 동료·상사에게 먼저 상의하고(생성형 AI 약 10%), 미국은 생성형 AI가 상사와 함께 첫 상의 상대(30% 이상)이며, 31개 시장 평균으로는 24시간 이용(42%)·속도와 품질(30%)이 동료 대신 AI를 찾는 주된 이유다.",
+  "Japanese workers still consult colleagues and bosses first (generative AI about 10%), in the US generative AI is a first port of call alongside the boss (over 30%), and on the 31-market average the main reasons for choosing AI over a colleague are 24/7 availability (42%) and speed and quality (30%).",
+  "Японцы по-прежнему сначала советуются с коллегами и начальством (генеративный ИИ — около 10%), в США генеративный ИИ вместе с начальником — первый адресат (более 30%), а в среднем по 31 рынку главные причины выбрать ИИ вместо коллеги — круглосуточная доступность (42%) и скорость и качество (30%).",
+  "日本人仍先找同事、上司商量（生成式AI约10%），美国则是生成式AI与上司并列为首要商量对象（30%以上），而在31个市场平均中，用AI代替同事的主要理由是全天候可用（42%）和速度与质量（30%）。",
+  "日本では今も同僚・上司に先に相談し（生成AIは約1割）、米国では生成AIが上司と並ぶ最初の相談相手（3割超）で、31市場平均では同僚の代わりにAIを使う主な理由は24時間使える（42%）と速さと質（30%）である。"])
+),
+CH("ask"),
+P(
+ s("A",[55,56],["대가도 있다: AI와 상호작용이 많을수록 외로움이 커지고(4개국 연구), ChatGPT 이후 개발자의 공개 질의응답 활동은 약 25% 줄었다.",
+  "There is a price: the more people interact with AI, the lonelier they feel (a four-country study), and developers' public Q&A activity fell by about 25% after ChatGPT.",
+  "Есть и цена: чем больше люди взаимодействуют с ИИ, тем сильнее одиночество (исследование в четырёх странах), а публичная активность разработчиков в вопросах и ответах после ChatGPT снизилась примерно на 25%.",
+  "代价也存在：与AI互动越多，孤独感越强（四国研究）；ChatGPT之后，开发者的公开问答活跃度下降了约25%。",
+  "代価もある。AIとのやり取りが多いほど孤独感が強まり（4か国の研究）、ChatGPT以降、開発者の公開Q&A活動は約25%減った。"]),
+ s("A",[50,49],["AI를 쓴 사람은 게으르고 덜 유능하게 평가받기 쉬워 직장인의 57%가 AI 사용을 숨긴다 — '물어볼 때의 감정노동'이 '숨길 때의 감정노동'으로 바뀌는 것이다.",
+  "People who use AI are readily judged lazy and less competent, and 57% of employees hide their AI use — the emotional labour of asking turns into the emotional labour of hiding.",
+  "Тех, кто пользуется ИИ, легко считают ленивыми и менее компетентными, и 57% работников скрывают использование ИИ: эмоциональный труд вопроса превращается в эмоциональный труд сокрытия.",
+  "用AI的人容易被看作懒惰、能力差，57%的员工会隐瞒使用AI——“提问时的情绪劳动”变成了“隐瞒时的情绪劳动”。",
+  "AIを使う人は怠惰で有能さに欠けると見られやすく、従業員の57%がAI利用を隠している――「聞くときの感情労働」が「隠すときの感情労働」に変わるのである。"]),
+ s("D",[58,59,60],["조경숙의 『액세스가 거부되었습니다』가 「감정노동 없이 물어볼 수 있는 사수, 챗GPT」와 「기계의 윤리적 태도를 위해 희생되는 건 누구일까」를 한 장에 나란히 두었듯, AI 사수는 해방이지만 독성 말투를 고치지 않는 핑계나 보이지 않는 노동의 전가가 되어서는 안 된다.",
+  "Just as Cho Kyung-sook's Access Denied places 'ChatGPT, a senior you can ask without emotional labour' side by side with 'Who is sacrificed for the machine's ethical manners?' in one chapter, the AI senior is a liberation but must not become an excuse for leaving toxic talk unfixed or for shifting labour onto invisible workers.",
+  "Как книга Чо Кёнсук «Доступ запрещён» ставит в одну главу рядом «ChatGPT — наставник, которого можно спросить без эмоционального труда» и «Кем жертвуют ради этичного поведения машины?», так и ИИ-наставник — освобождение, но он не должен стать поводом не исправлять токсичный тон или перекладывать труд на невидимых работников.",
+  "正如조경숙（Cho Kyung-sook）的《访问被拒绝》把《无需情绪劳动就能请教的师傅，ChatGPT》与《为了机器的伦理姿态，牺牲的是谁？》并列在同一章，AI师傅是一种解脱，但不应成为不改毒舌文化的借口，也不应把劳动转嫁给看不见的人。",
+  "チョ・ギョンスクの『アクセスが拒否されました』が「感情労働なしで聞ける先輩、ChatGPT」と「機械の倫理的態度のために犠牲になるのは誰か」を一つの章に並べたように、AIの先輩は解放だが、毒舌を直さない口実や見えない労働への押しつけになってはならない。"],null,"M")
+)]);
+
+// place the new section right after "governance" (Current ⑤)
+(function(){const sec=SECTIONS.pop();const i=SECTIONS.findIndex(x=>x.id==="governance");SECTIONS.splice(i+1,0,sec);})();
+
+// ===== Additions to existing sections (appended so earlier sentence IDs stay unchanged) =====
+(function(){
+ const S=id=>SECTIONS.find(x=>x.id===id);
+ const add=(blk,...ss)=>{(blk.kj||blk.p).push(...ss);};
+ const fix=(o,pairs)=>{LANGS.forEach((l,i)=>{const [a,b]=pairs[i];if(o.t[l].indexOf(a)<0)throw new Error("patch miss "+l+": "+a);o.t[l]=o.t[l].replace(a,b);});};
+ // review fix: the 90% algorithmic-management figure refers to firms surveyed by the OECD
+ const sum=S("summary");
+ fix(sum.detail[0].kj[4],[["미국 기업의 90%는","OECD 조사 대상 미국 기업의 90%는"],["90% of US firms","90% of US firms in an OECD survey"],["90% американских фирм","90% американских фирм в опросе ОЭСР"],["而美国90%的企业","而经合组织调查中美国90%的企业"],["米国企業の90%は","OECDの調査対象となった米国企業の90%は"]]);
+ add(sum.detail[0],
+  s("D",[43,55,49,58],["고객이 아닌 동료 사이에서도 AI는 감정노동을 바꾼다: 한국 AI 이용자의 72.4%가 '눈치'와 '핀잔' 때문에 사람보다 AI에게 묻는 것을 편하게 여겨 AI는 '감정노동 없이 물어볼 수 있는 사수'가 되었지만, AI와의 상호작용이 많을수록 외로움이 커지고 직장인의 57%는 AI 사용을 숨기는 새로운 감정노동을 떠안는다.",
+   "AI also changes emotional labour between colleagues, not just with customers: 72.4% of Korean AI users find it easier to ask AI than a person because of social anxiety and put-downs, making AI 'a senior you can ask without emotional labour' — yet more AI interaction brings more loneliness, and 57% of employees take on a new emotional labour of hiding their AI use.",
+   "ИИ меняет эмоциональный труд и между коллегами, а не только с клиентами: 72,4% корейских пользователей ИИ проще спросить ИИ, чем человека, из-за оглядки и упрёков, и ИИ стал «наставником, которого можно спросить без эмоционального труда», — но чем больше взаимодействия с ИИ, тем сильнее одиночество, а 57% работников берут на себя новый эмоциональный труд сокрытия ИИ.",
+   "AI不仅改变了面向顾客的情绪劳动，也改变了同事之间的情绪劳动：72.4%的韩国AI用户因为看脸色和怕挨数落而觉得问AI比问人更自在，AI成了“无需情绪劳动就能请教的师傅”；但与AI互动越多孤独感越强，57%的员工还要承担隐瞒使用AI的新型情绪劳动。",
+   "AIは顧客相手だけでなく同僚どうしの感情労働も変える。韓国のAI利用者の72.4%が気遣いと小言のために人よりAIに聞く方が気楽だと感じ、AIは「感情労働なしで聞ける先輩」になったが、AIとのやり取りが多いほど孤独感が強まり、従業員の57%はAI利用を隠すという新しい感情労働を背負う。"],null,"M"));
+ add(sum.concise[0],
+  s("D",[43,49,55],["동료 사이에서는 AI가 '이런 것도 모르냐'는 핀잔 없이 물을 수 있는 사수가 되었지만(한국 72.4%), 외로움과 'AI 사용을 숨기는' 새로운 감정노동(57%)이 따라온다.",
+   "Among colleagues, AI has become a senior you can ask without the 'you don't even know this?' put-down (72.4% in Korea), but loneliness and a new emotional labour of hiding AI use (57%) come with it.",
+   "Между коллегами ИИ стал наставником, которого можно спросить без упрёка «ты даже этого не знаешь?» (72,4% в Корее), но вместе с этим приходят одиночество и новый эмоциональный труд сокрытия ИИ (57%).",
+   "在同事之间，AI成了不必听“这都不知道？”就能请教的师傅（韩国72.4%），但随之而来的是孤独和“隐瞒使用AI”的新型情绪劳动（57%）。",
+   "同僚どうしでは、AIが「こんなことも知らないの？」と言われずに聞ける先輩になったが（韓国72.4%）、孤独と「AI利用を隠す」新しい感情労働（57%）がついてくる。"],null,"M"));
+ // frame: announce the new section
+ add(S("frame").detail[0],
+  s("D",[],["또한 '현재 ⑥' 장에서는 고객이 아니라 상사·선배·동료를 향한 감정노동 — 모르는 것을 물을 때의 민망함과 핀잔 — 을 AI가 어떻게 바꾸는지 나라·업종·기업별로 따로 비교한다.",
+   "The 'Current ⑥' section separately compares, by country, industry and company, how AI changes emotional labour directed not at customers but at bosses, seniors and colleagues — the embarrassment and put-downs that come with asking what you don't know.",
+   "Раздел «Сейчас ⑥» отдельно сравнивает по странам, отраслям и компаниям, как ИИ меняет эмоциональный труд, направленный не на клиентов, а на начальников, старших и коллег, — неловкость и упрёки, сопровождающие вопрос о том, чего не знаешь.",
+   "“现状⑥”一章则按国家、行业和企业分别比较，AI如何改变并非面向顾客、而是面向上司、前辈和同事的情绪劳动——即问不懂的事时的难为情与挨数落。",
+   "また「現在⑥」の章では、顧客ではなく上司・先輩・同僚に向けた感情労働――わからないことを聞くときの気恥ずかしさと小言――をAIがどう変えるかを、国・業種・企業別に比較する。"]));
+ // issues: sixth line of debate
+ const iss=S("issues");
+ const t5=[["다섯 갈래","여섯 갈래"],["Five Lines","Six Lines"],["пять линий","шесть линий"],["五条主线","六条主线"],["五つの筋","六つの筋"]];
+ LANGS.forEach((l,i)=>{if(iss.t[l].indexOf(t5[i][0])<0)throw new Error("title "+l);iss.t[l]=iss.t[l].replace(t5[i][0],t5[i][1]);});
+ iss.detail.push(H(["⑥ AI 사수: 해방인가, 고립인가","6. The AI senior: liberation or isolation?","⑥ ИИ-наставник: освобождение или изоляция?","⑥ AI师傅：解脱还是孤立？","⑥ AIの先輩：解放か、孤立か"]),P(
+  s("D",[43,55,57],["질문의 문턱을 낮춘 AI는 위계가 강한 일터일수록 해방으로 느껴지지만, 동료에게 묻고 배우는 대화가 줄면 외로움과 멘토링 공백이라는 비용이 생길 수 있다.",
+   "AI that lowers the threshold for asking feels like liberation, all the more in strongly hierarchical workplaces, but as conversations of asking and learning from colleagues decline, loneliness and a mentoring gap can follow.",
+   "ИИ, снижающий порог для вопросов, воспринимается как освобождение — тем сильнее, чем жёстче иерархия на работе, — но с сокращением разговоров, в которых спрашивают и учатся у коллег, могут прийти одиночество и пробел в наставничестве.",
+   "降低了提问门槛的AI，在等级越森严的职场越让人感到解脱；但向同事提问、学习的对话减少后，可能带来孤独和带教空白的代价。",
+   "質問の敷居を下げたAIは上下関係の強い職場ほど解放と感じられるが、同僚に聞いて学ぶ会話が減れば、孤独とメンタリングの空白というコストが生じうる。"]),
+  s("D",[50,49,52],["또 AI 사용 자체가 '게으름'의 신호로 읽히는 한 사람들은 AI에게 물은 사실을 숨기게 되어, 감정노동은 줄기보다 '은폐'로 옮겨 간다 — 쟁점은 AI 사용을 드러내도 불이익이 없는 규범을 만들 수 있느냐다.",
+   "And as long as AI use itself is read as a sign of laziness, people will hide that they asked AI, so emotional labour shifts into concealment rather than shrinking — the issue is whether norms can be built under which disclosing AI use carries no penalty.",
+   "Пока само использование ИИ воспринимается как признак лени, люди будут скрывать, что спрашивали ИИ, и эмоциональный труд не уменьшится, а перейдёт в сокрытие; вопрос в том, удастся ли выработать нормы, при которых признание в использовании ИИ не влечёт санкций.",
+   "而只要使用AI本身被解读为“懒惰”的信号，人们就会隐瞒自己问过AI，情绪劳动非但不会减少，反而转向“隐瞒”——争点在于能否建立公开使用AI也不吃亏的规范。",
+   "またAIの利用そのものが「怠惰」のサインと読まれる限り、人はAIに聞いたことを隠すようになり、感情労働は減るよりも「隠蔽」へ移る――論点は、AI利用を明かしても不利益のない規範をつくれるかどうかである。"])));
+ // strategy: organisations — between seniors and newcomers
+ const st=S("strategy");
+ st.detail.push(H(["조직: 사수와 신입 사이","Organisations: between seniors and newcomers","Организации: между наставниками и новичками","组织：师傅与新人之间","組織：先輩と新人のあいだ"]),P(
+  s("D",[43,46,58],["'이런 것도 모르냐'는 말을 직장 내 괴롭힘 예방 교육의 구체적 사례로 다루고, 신입이 AI에게 먼저 묻는 것을 공식적으로 허용하되 AI가 답하지 못한 질문을 사람 사수에게 가져갈 정기적인 자리(질문 시간·멘토링)를 함께 만들라.",
+   "Treat lines like 'you don't even know this?' as concrete cases in workplace-harassment prevention training, and formally allow newcomers to ask AI first — while creating regular slots (question hours, mentoring) to bring what AI could not answer to human seniors.",
+   "Разбирайте фразы вроде «ты даже этого не знаешь?» как конкретные случаи на тренингах по предотвращению притеснений на работе и официально разрешите новичкам сначала спрашивать ИИ, одновременно создав регулярные форматы (часы вопросов, наставничество), чтобы нести наставникам-людям то, на что ИИ не ответил.",
+   "把“这都不知道？”这类话作为职场霸凌预防培训的具体案例，正式允许新人先问AI，同时设立定期的场合（提问时间、带教），把AI答不了的问题带给真人师傅。",
+   "「こんなことも知らないの？」という言葉を職場のハラスメント防止研修の具体例として扱い、新人がまずAIに聞くことを公式に認めつつ、AIが答えられなかった質問を人の先輩に持っていく定期的な場（質問タイム・メンタリング）を一緒につくれ。"]),
+  s("D",[50,49,48],["AI 사용을 숨기지 않아도 되도록 'AI를 어디에 썼고 사람이 무엇을 검토했는지'를 밝히는 간단한 공개 규칙을 정하고, 관리자부터 자신의 AI 사용을 드러내 AI 사용자에게 붙는 '게으름' 낙인을 줄이라.",
+   "Set simple disclosure rules — where AI was used and what a person reviewed — so that AI use need not be hidden, and have managers disclose their own AI use first to reduce the 'laziness' stigma attached to AI users.",
+   "Введите простые правила раскрытия — где использовался ИИ и что проверил человек, — чтобы не приходилось скрывать ИИ, и пусть руководители первыми открыто говорят о своём использовании ИИ, ослабляя стигму «ленивости».",
+   "制定简单的公开规则——说明AI用在了哪里、人审核了什么——让人不必隐瞒使用AI；并由管理者率先公开自己使用AI，减轻对AI使用者的“懒惰”污名。",
+   "AI利用を隠さなくてすむよう「どこにAIを使い、人が何を確認したか」を明かす簡単な開示ルールを定め、管理職から自分のAI利用を明かしてAI利用者への「怠惰」のスティグマを減らせ。"])));
+ add(st.concise[0],
+  s("D",[43,50,58],["조직은 신입이 AI에게 먼저 묻는 것을 허용하되 사람 사수와의 질문 시간을 따로 보장하고, AI 사용을 숨기지 않아도 되는 공개 규칙을 만들어야 한다.",
+   "Organisations should let newcomers ask AI first while guaranteeing separate question time with human seniors, and adopt disclosure rules so that AI use need not be hidden.",
+   "Организациям стоит разрешить новичкам сначала спрашивать ИИ, гарантируя отдельное время для вопросов наставникам-людям, и ввести правила раскрытия, чтобы ИИ не приходилось скрывать.",
+   "组织应允许新人先问AI，同时另行保障与真人师傅的提问时间，并制定不必隐瞒使用AI的公开规则。",
+   "組織は新人がまずAIに聞くことを認めつつ人の先輩との質問時間を別に保障し、AI利用を隠さなくてすむ開示ルールをつくるべきだ。"]));
+ // method: limitation 4
+ add(S("method").detail[0],
+  s("D",[43,44,45,46,58],["한계 ④: '현재 ⑥'의 나라별 비교는 서로 다른 기관이 다른 표본으로 실시한 조사(한국 AI 커뮤니티 이용자, 일·미 취업자, 일본 20대)를 나란히 놓은 것이어서 수치의 크기를 직접 비교할 수 없고, 『액세스가 거부되었습니다』는 목차와 출판사 서평에서 확인되는 범위의 논지만 인용했다.",
+   "Limitation 4: the country comparison in 'Current ⑥' sets side by side surveys run by different bodies on different samples (Korean AI-community users, Japanese and US workers, Japanese people in their twenties), so the sizes of the figures cannot be compared directly; and Access Denied is cited only for arguments visible in its table of contents and publisher's review.",
+   "Ограничение ④: сравнение стран в разделе «Сейчас ⑥» сопоставляет опросы разных организаций на разных выборках (пользователи корейского ИИ-сообщества, работники Японии и США, японцы 20–29 лет), поэтому величины цифр нельзя сравнивать напрямую; книга «Доступ запрещён» цитируется только в пределах тезисов, видимых в оглавлении и издательской аннотации.",
+   "局限④：“现状⑥”中的国家比较，是把不同机构以不同样本开展的调查（韩国AI社区用户、日美在职者、日本20多岁人群）并列，数值大小不能直接比较；《访问被拒绝》仅引用目录和出版社书评中可确认的论点。",
+   "限界④：「現在⑥」の国別比較は、異なる機関が異なる標本で行った調査（韓国のAIコミュニティ利用者、日米の就業者、日本の20代）を並べたもので数値の大きさは直接比べられず、『アクセスが拒否されました』は目次と出版社の書評で確認できる範囲の論旨のみを引用した。"]));
+})();
+
 // ===== Scenarios (S1–S4) =====
 // Axes: A = diffusion of customer-facing AI & algorithmic management, I = protective institutions (customer-harassment law,
 //       limits on emotion surveillance, enforcement), L = frontline buffer (staffing, discretion, right to stop abusive contacts,
@@ -1749,6 +2309,72 @@ const SIGNALS_TABLE=TBL([
  [[14,21],"B",["교사 학부모 민원 스트레스 (한·일)","50% 초과","다음 TALIS에서 OECD 평균 수준 / 50% 초과 유지","I↑ / S2·S3"],["Teachers' parent-related stress (KR, JP)","Over 50%","Near the OECD average in the next TALIS / stays above 50%","I↑ / S2·S3"],["Стресс учителей из-за родителей (Корея, Япония)","Более 50%","На уровне среднего ОЭСР в следующем TALIS / остаётся выше 50%","I↑ / S2·S3"],["教师家长相关压力（韩、日）","超过50%","下一轮TALIS接近经合组织平均 / 维持50%以上","I↑ / S2·S3"],["教員の保護者対応ストレス（日韓）","50%超","次回TALISでOECD平均並み / 50%超が続く","I↑ / S2・S3"]]
 ]);
 
+// ===== Table: emotional labour among colleagues by country, industry and company =====
+const PEERS_TABLE=TBL([
+ ["대상","관찰된 변화","감정적 의미","판단"],
+ ["Group","Observed change","Emotional meaning","Judgement"],
+ ["Группа","Наблюдаемое изменение","Эмоциональный смысл","Суждение"],
+ ["对象","观察到的变化","情感含义","判断"],
+ ["対象","観察された変化","感情面の意味","判断"]
+],[
+ [[43,8],"C",
+  ["한국 (AI 커뮤니티 이용자 5,586명)","사람보다 AI가 편함 72.4% 대 5.4%; 이유의 65.5%가 눈치·민망함·핀잔 회피; 전날 외로움 15%","평가·눈치 회피형","질문의 감정 비용이 커서 'AI 사수'의 해방감이 가장 큼"],
+  ["Korea (5,586 AI-community users)","AI easier than people 72.4% vs 5.4%; 65.5% cite avoiding moods, embarrassment, scolding; daily loneliness 15%","Avoiding judgement and social anxiety","High emotional cost of asking, so relief from an 'AI senior' is greatest"],
+  ["Корея (5586 пользователей ИИ-сообщества)","С ИИ проще, чем с людьми: 72,4% против 5,4%; 65,5% — избежать оглядки, неловкости, упрёков; одиночество накануне 15%","Избегание оценки и оглядки","Цена вопроса высока, поэтому облегчение от «ИИ-наставника» максимально"],
+  ["韩国（AI社区用户5,586人）","问AI比问人自在72.4%对5.4%；65.5%为回避看脸色、难为情、挨数落；前一天孤独15%","回避评判与看脸色型","提问的情绪成本高，“AI师傅”带来的解脱感最大"],
+  ["韓国（AIコミュニティ利用者5,586人）","人よりAIが気楽72.4%対5.4%；65.5%が気遣い・気恥ずかしさ・小言の回避；前日の孤独15%","評価・気遣い回避型","質問の感情コストが高く「AIの先輩」の解放感が最も大きい"]],
+ [[45,46,9],"C",
+  ["일본 (일·미 취업자 2만 608명, 20대 595명)","첫 상의 상대는 동료·상사 각 약 30%, 생성형 AI 약 10%; 20대 26.5%는 상사보다 AI를 신뢰; 외로움 11%","체념·폐 끼치기 회피형","사람에게 묻는 문화는 남아 있지만, 형식화된 상담 창구가 청년을 AI로 보냄"],
+  ["Japan (20,608 JP/US workers; 595 in their 20s)","First consulted: colleague and boss about 30% each, generative AI about 10%; 26.5% of those in their 20s trust AI over their boss; loneliness 11%","Resignation and not wanting to impose","A culture of asking people remains, but hollow consultation channels push the young towards AI"],
+  ["Япония (20 608 работников Японии и США; 595 в возрасте 20–29)","Первыми советуются с коллегой и начальником (около 30% каждый), генеративный ИИ — около 10%; 26,5% молодых доверяют ИИ больше начальника; одиночество 11%","Покорность и нежелание обременять","Культура спрашивать людей сохраняется, но формальные каналы консультаций толкают молодёжь к ИИ"],
+  ["日本（日美在职者20,608人；20多岁595人）","首要商量对象为同事和上司各约30%，生成式AI约10%；20多岁者26.5%比上司更信任AI；孤独11%","无奈与不愿添麻烦型","找人商量的文化仍在，但流于形式的咨询渠道把年轻人推向AI"],
+  ["日本（日米の就業者20,608人、20代595人）","最初の相談相手は同僚・上司が各約3割、生成AIは約1割；20代の26.5%が上司よりAIを信頼；孤独11%","あきらめ・迷惑回避型","人に聞く文化は残るが、形骸化した相談窓口が若手をAIへ向かわせる"]],
+ [[45,10],"C",
+  ["미국","생성형 AI가 상사와 함께 첫 상의 상대(30% 이상), 사람에게 상의하는 빈도도 늘어나는 경향; 외로움 19%","위험 회피·효율형","AI가 사람과의 상의를 '대체'가 아니라 '준비'시키는 보완의 신호"],
+  ["United States","Generative AI a first port of call alongside the boss (over 30%), with a tendency to consult people more often too; loneliness 19%","Risk avoidance and efficiency","A sign of complementarity: AI preparing people for consultation rather than replacing it"],
+  ["США","Генеративный ИИ вместе с начальником — первый адресат (более 30%), при тенденции чаще советоваться и с людьми; одиночество 19%","Избегание рисков и эффективность","Признак взаимодополнения: ИИ готовит к разговору с людьми, а не заменяет его"],
+  ["美国","生成式AI与上司并列为首要商量对象（30%以上），找人商量的频率也有增加趋势；孤独19%","风险回避与效率型","AI为与人商量“铺垫”而非“取代”的互补信号"],
+  ["米国","生成AIが上司と並ぶ最初の相談相手（3割超）、人への相談頻度も増える傾向；孤独19%","リスク回避・効率型","AIが人への相談を「代替」でなく「準備」させる補完のサイン"]],
+ [[47,49,48],"B",
+  ["31~47개국 평균","동료 대신 AI를 찾는 이유: 24시간 42%·속도와 품질 30%; 직장인 57%가 AI 사용을 숨김; 48%는 상사에게 밝히기 불편","효율형 + 은폐","효율 때문에 AI를 쓰면서도 사용 사실은 숨기는 이중 구조"],
+  ["31–47-country averages","Reasons to use AI over a colleague: 24/7 42%, speed and quality 30%; 57% of employees hide AI use; 48% uneasy telling their manager","Efficiency plus concealment","A dual structure: using AI for efficiency while hiding the fact"],
+  ["Средние по 31–47 странам","Причины выбрать ИИ вместо коллеги: круглосуточно 42%, скорость и качество 30%; 57% работников скрывают ИИ; 48% неловко сказать руководителю","Эффективность плюс сокрытие","Двойная структура: пользоваться ИИ ради эффективности, скрывая сам факт"],
+  ["31–47国平均","用AI代替同事的理由：全天候42%、速度与质量30%；57%的员工隐瞒使用AI；48%不愿告诉上司","效率型＋隐瞒","为效率用AI、却隐瞒使用事实的双重结构"],
+  ["31〜47か国平均","同僚の代わりにAIを使う理由：24時間42%、速さと質30%；従業員の57%がAI利用を隠す；48%は上司に言いにくい","効率型＋隠蔽","効率のためにAIを使いながら利用の事実は隠す二重構造"]],
+ [[56,57],"A",
+  ["소프트웨어 개발 (스택오버플로, GitHub Copilot 이용자 18만 7천여 명)","공개 질의응답 활동 약 −25%; 동료에게 묻는 대신 Copilot에 질문, 독립 작업 증가","공개 지식·동료 학습 감소","개인의 질문 비용은 줄지만 공동체의 지식 공유와 멘토링이 약해짐"],
+  ["Software development (Stack Overflow; 187,000+ GitHub Copilot users)","Public Q&A activity about −25%; asking Copilot instead of peers; more independent work","Less public knowledge and peer learning","Individuals' cost of asking falls, but community knowledge-sharing and mentoring weaken"],
+  ["Разработка ПО (Stack Overflow; более 187 000 пользователей GitHub Copilot)","Публичная активность в вопросах и ответах около −25%; вопросы Copilot вместо коллег; больше самостоятельной работы","Меньше публичных знаний и обучения у коллег","Личная цена вопроса падает, но обмен знаниями и наставничество слабеют"],
+  ["软件开发（Stack Overflow；18.7万余名GitHub Copilot用户）","公开问答活跃度约−25%；问Copilot而非同事，独立工作增加","公开知识与同侪学习减少","个人提问成本下降，但社区知识共享与带教减弱"],
+  ["ソフトウェア開発（Stack Overflow、GitHub Copilot利用者18万7千人余り）","公開Q&A活動が約−25%；同僚でなくCopilotに質問、独立作業が増加","公開の知識・同僚からの学びの減少","個人の質問コストは下がるが、コミュニティの知識共有とメンタリングが弱まる"]],
+ [[29],"A",
+  ["콜센터 (소프트웨어 기업 상담원 5,179명)","초보 생산성 +34%, 숙련자의 모범 사례 전파, 고객 정서 개선","'AI 사수'·완충","신입이 '물어보며 배우는' 비용을 AI가 대신함"],
+  ["Call centre (5,179 agents at a software firm)","Novice productivity +34%; best practices of skilled workers spread; customer sentiment improves","'AI senior' and buffer","AI bears the cost newcomers used to pay to learn by asking"],
+  ["Колл-центр (5179 операторов компании-разработчика ПО)","Производительность новичков +34%; распространение лучших практик опытных; настроение клиентов улучшается","«ИИ-наставник» и буфер","ИИ берёт на себя цену, которую новички платили, учась через вопросы"],
+  ["呼叫中心（某软件企业5,179名客服）","新手生产率+34%；熟练者的最佳做法得到传播；顾客情绪改善","“AI师傅”与缓冲","新人“边问边学”的成本由AI承担"],
+  ["コールセンター（ソフトウェア企業の担当者5,179人）","初心者の生産性+34%；熟練者のベストプラクティスが広がる；顧客の感情が改善","「AIの先輩」・緩衝","新人が「聞きながら学ぶ」コストをAIが肩代わりする"]],
+ [[54],"B",
+  ["소비재 R&D (P&G 전문가 776명)","AI와 혼자 일한 사람 = AI 없는 2인 팀 성과; 긍정 정서 증가","'AI 동료'","팀 동료가 주던 정서적 지지의 일부를 AI가 대신함"],
+  ["Consumer-goods R&D (776 P&G professionals)","Individual with AI = performance of two-person team without AI; more positive emotions","'AI teammate'","AI takes over part of the emotional support teammates provided"],
+  ["НИОКР потребительских товаров (776 специалистов P&G)","Один с ИИ = результат команды из двух без ИИ; больше позитивных эмоций","«ИИ-коллега»","ИИ берёт на себя часть эмоциональной поддержки, которую давали коллеги"],
+  ["消费品研发（宝洁776名专业人员）","与AI单独工作＝无AI两人团队的绩效；正面情绪增加","“AI同事”","AI替代了团队同事提供的部分情感支持"],
+  ["消費財の研究開発（P&Gの専門職776人）","AIと一人＝AIなしの2人チームの成果；前向きな感情が増加","「AIの同僚」","チームの同僚が与えていた感情的な支えの一部をAIが代わる"]],
+ [[55],"A",
+  ["여러 업종 (대만·인도네시아·미국·말레이시아 794명)","AI 상호작용 증가 → 외로움·불면·음주 증가, 동료 돕기도 증가","연결의 결핍과 반작용","AI가 사람 사이의 상호작용을 지나치게 대신하면 외로움이 비용으로 돌아옴"],
+  ["Multiple industries (794 workers in Taiwan, Indonesia, the US, Malaysia)","More AI interaction → more loneliness, insomnia and drinking, but also more helping colleagues","Lack of connection and counter-reaction","If AI replaces too much human interaction, loneliness comes back as a cost"],
+  ["Разные отрасли (794 работника Тайваня, Индонезии, США, Малайзии)","Больше взаимодействия с ИИ → больше одиночества, бессонницы и алкоголя, но и больше помощи коллегам","Нехватка связи и ответная реакция","Если ИИ слишком сильно заменяет общение людей, одиночество возвращается как цена"],
+  ["多个行业（台湾、印度尼西亚、美国、马来西亚794人）","与AI互动增加→孤独、失眠、饮酒增加，帮助同事也增加","连接的缺失与反作用","AI过度取代人际互动时，孤独会作为代价回来"],
+  ["複数の業種（台湾・インドネシア・米国・マレーシアの794人）","AIとのやり取りが増える→孤独・不眠・飲酒が増える一方、同僚を助ける行動も増加","つながりの欠如と反作用","AIが人どうしのやり取りを代わりすぎると、孤独がコストとして返ってくる"]]
+]);
+
+// early-warning indicator for the colleague dimension (appended → new id t-signals-7)
+SIGNALS_TABLE.rows.push({refs:[49,48,50],grade:"B",t:L5([
+ ["AI 사용 공개율(직장 내)","숨김 57%(47개국), 상사에게 밝히기 불편 48%","숨김 40% 미만 / 60% 이상 유지","S1 / S2"],
+ ["Disclosure of AI use at work","57% hide (47 countries); 48% uneasy telling their manager","Hiding below 40% / stays above 60%","S1 / S2"],
+ ["Раскрытие использования ИИ на работе","Скрывают 57% (47 стран); 48% неловко сказать руководителю","Скрывают менее 40% / остаётся выше 60%","S1 / S2"],
+ ["职场中公开使用AI的比例","隐瞒57%（47国），不愿告诉上司48%","隐瞒低于40% / 维持60%以上","S1 / S2"],
+ ["職場でのAI利用の開示","隠す57%（47か国）、上司に言いにくい48%","隠す40%未満 / 60%以上が続く","S1 / S2"]])});
+
 // ===== Topic-specific UI strings (override template's generic dictionary) =====
 const UI_OVER={
 ko:{brand:"AI 시대와 일터의 감정노동",brandS:"심층 리포트 · 2026.11",
@@ -1878,6 +2504,44 @@ ja:{brand:"AI時代と職場の感情労働",brandS:"深層レポート · 2026.
  mapX:"現在の証拠の強さ →",mapY:"感情労働の負担：軽く↓・重く↑"}
 };
 
+// ===== UI strings for the colleague section (chart "ask") and the "book" evidence type =====
+(function(){
+ const A={
+ ko:{c_ask:"AI에게 묻는 이유 — 그리고 숨기는 이유",c_askS:"응답 비율(%) · 서로 다른 조사이므로 조사 간 막대 길이를 직접 비교하지 말 것",
+  askH:["AI에게 묻는 게 편한 이유 — 한국 AI 이용자 [43]","동료 대신 AI를 찾는 이유 — 31개 시장 [47]","AI 사용을 숨기거나 밝히기 꺼림"],
+  askL:["바쁜 사람 눈치를 안 봐도 돼서","기초 질문도 부끄럽지 않아서","핀잔·잔소리를 안 들어도 돼서","AI가 사람보다 정확해서","24시간 이용 가능","속도와 품질","무한한 아이디어","상사에게 AI 사용을 밝히기 불편 [48]","AI 사용을 숨긴다 (47개국) [49]","AI 결과물을 내 것처럼 제출 (한국) [43]"],
+  askG:["평가·눈치 회피","효율·정확성","AI 사용의 은폐"],
+  type:{q1:"Q1 논문",stat:"공식 통계",io:"국제기구·정부",survey:"조사",press:"언론",ind:"기업·업계",book:"단행본"}},
+ en:{c_ask:"Why people ask AI — and why they hide it",c_askS:"Share of respondents (%) · different surveys, so do not compare bar lengths across surveys",
+  askH:["Why asking AI is easier — Korean AI users [43]","Why people turn to AI instead of a colleague — 31 markets [47]","Hiding AI use or reluctance to disclose it"],
+  askL:["No need to read a busy person's mood","Not embarrassed by basic questions","No scolding or nagging","AI is more accurate than people","Available 24/7","Speed and quality","Unlimited ideas","Uneasy telling manager about AI use [48]","Hide AI use (47 countries) [49]","Submitted AI output as own (Korea) [43]"],
+  askG:["Avoiding judgement and moods","Efficiency and accuracy","Concealing AI use"],
+  type:{q1:"Q1 paper",stat:"Official statistics",io:"Intl. org / government",survey:"Survey",press:"Press",ind:"Company / industry",book:"Book"}},
+ ru:{c_ask:"Почему спрашивают ИИ — и почему это скрывают",c_askS:"Доля ответивших (%) · опросы разные, длину столбцов между опросами напрямую не сравнивать",
+  askH:["Почему спрашивать ИИ проще — пользователи ИИ в Корее [43]","Почему обращаются к ИИ вместо коллеги — 31 рынок [47]","Сокрытие ИИ или нежелание о нём говорить"],
+  askL:["Не нужно ловить настроение занятого","Не стыдно за простые вопросы","Не услышишь упрёков и нотаций","ИИ точнее людей","Доступен круглосуточно","Скорость и качество","Неограниченные идеи","Неловко сказать руководителю об ИИ [48]","Скрывают ИИ (47 стран) [49]","Выдавали ответ ИИ за свой (Корея) [43]"],
+  askG:["Избегание оценки и оглядки","Эффективность и точность","Сокрытие ИИ"],
+  type:{q1:"Статья Q1",stat:"Офиц. статистика",io:"Межд. орг. / правительство",survey:"Опрос",press:"СМИ",ind:"Компания / отрасль",book:"Книга"}},
+ zh:{c_ask:"为什么问AI——又为什么隐瞒",c_askS:"回答比例（%）· 各为不同调查，请勿跨调查直接比较条形长度",
+  askH:["问AI更自在的理由——韩国AI用户 [43]","用AI代替同事的理由——31个市场 [47]","隐瞒使用AI或不愿公开"],
+  askL:["不用看忙碌的人的脸色","问基础问题也不难为情","不会挨数落和唠叨","AI比人更准确","全天候可用","速度与质量","无限的点子","不愿告诉上司用了AI [48]","隐瞒使用AI（47国）[49]","把AI成果当作自己的提交（韩国）[43]"],
+  askG:["回避评判与看脸色","效率与准确性","隐瞒使用AI"],
+  type:{q1:"Q1论文",stat:"官方统计",io:"国际组织·政府",survey:"调查",press:"媒体",ind:"企业·行业",book:"专著"}},
+ ja:{c_ask:"なぜAIに聞くのか——そしてなぜ隠すのか",c_askS:"回答割合（%）・調査が異なるため、調査間で棒の長さを直接比べないこと",
+  askH:["AIに聞く方が気楽な理由 — 韓国のAI利用者 [43]","同僚の代わりにAIを使う理由 — 31市場 [47]","AI利用を隠す・明かしにくい"],
+  askL:["忙しい人の顔色をうかがわなくていい","基本的な質問でも恥ずかしくない","小言やお説教を聞かなくていい","AIの方が人より正確","24時間使える","速さと質","尽きないアイデア","上司にAI利用を言いにくい [48]","AI利用を隠す（47か国）[49]","AIの成果物を自分のものとして提出（韓国）[43]"],
+  askG:["評価・気遣いの回避","効率・正確さ","AI利用の隠蔽"],
+  type:{q1:"Q1論文",stat:"公式統計",io:"国際機関・政府",survey:"調査",press:"報道",ind:"企業・業界",book:"書籍"}}};
+ LANGS.forEach(l=>Object.assign(UI_OVER[l],A[l]));
+ // cover subtitle: mention the colleague dimension
+ const sub=[["공식 통계·국제 조사로 비교한 뒤, ","공식 통계·국제 조사로 비교하고, 상사·동료 대신 AI에게 묻게 된 일터의 변화를 살핀 뒤, "],
+  ["using official statistics and international surveys, and estimates","using official statistics and international surveys, examines what changes when workers ask AI instead of bosses and colleagues, and estimates"],
+  ["по официальной статистике и международным опросам, а также","по официальной статистике и международным опросам, разбор того, что меняется, когда вместо начальников и коллег спрашивают ИИ, а также"],
+  ["及主要职业的情绪劳动，","及主要职业的情绪劳动，考察员工不再问上司和同事、改问AI后职场的变化，"],
+  ["国際調査で比較したうえで、","国際調査で比較し、上司や同僚の代わりにAIに聞くようになった職場の変化も検討したうえで、"]];
+ LANGS.forEach((l,i)=>{const o=UI_OVER[l];if(o.sub.indexOf(sub[i][0])<0)throw new Error("sub "+l);o.sub=o.sub.replace(sub[i][0],sub[i][1]);});
+})();
+
 // ===== Normalise & self-check =====
 SECTIONS.forEach((sec,i)=>sec.num=String(i));
 EVIDENCE.sort((a,b)=>a.id-b.id);
@@ -2002,7 +2666,7 @@ function render(){
    else if(b.kj)h+=`<ul class="kj">`+b.kj.map((s,i)=>`<li>${sentHTML(s,`s-${sec.id}-${bi}-${i}`,lab)}</li>`).join("")+`</ul>`;
    else if(b.h)h+=`<h3 class="sub">${esc(X(b.h))}</h3>`;
    else if(b.chart)h+=`<figure class="fig" data-chart="${b.chart}"></figure>`;
-   else if(b.table)h+=renderTable({countries:COUNTRY_TABLE,signals:SIGNALS_TABLE,reg:REG_TABLE,timeline:TIMELINE_TABLE,jobs:JOBS_TABLE}[b.table],b.table,lab);
+   else if(b.table)h+=renderTable({countries:COUNTRY_TABLE,signals:SIGNALS_TABLE,reg:REG_TABLE,timeline:TIMELINE_TABLE,jobs:JOBS_TABLE,peers:PEERS_TABLE}[b.table],b.table,lab);
    else if(b.scen)h+=renderScenCards(lab);
    else if(b.widget==="mcmc")h+=mcmcShell();
    else if(b.widget==="panel")h+=`<div class="wbox" id="panelW"></div>`;
@@ -2069,7 +2733,7 @@ function bindSent(){
 
 // ---------- reference list ----------
 function renderRefList(){const el=$("#refl");if(!el)return;
- const types=["all","q1","stat","io","survey","press","ind"];
+ const types=["all","q1","stat","io","survey","press","ind","book"].filter(t=>t==="all"||EVIDENCE.some(e=>e.type===t));
  el.innerHTML=`<div class="reff noprint"><input id="rq" placeholder="${esc(T("search"))}"><div class="seg" id="rtype">${types.map(t=>`<button data-t="${t}" aria-pressed="${t==="all"}">${t==="all"?T("all"):T("type")[t]}</button>`).join("")}</div></div>
  <div class="fsub" style="font-size:12px;color:var(--muted);margin-bottom:6px">${T("jump")}</div><div id="rlist">`+
  EVIDENCE.map(e=>`<div class="refitem" id="ref-${e.id}" data-type="${e.type}" data-txt="${esc((e.title+" "+e.src+" "+e.quote).toLowerCase())}"><button class="rn" data-n="${e.id}">${e.id}</button><div>
@@ -2089,7 +2753,7 @@ function fig(el,cap,sub,src,svg,legend){el.innerHTML=`<figcaption>${esc(cap)}</f
 const leg=items=>`<div class="legend-row">${items.map(([c,l])=>`<span><i style="background:${c}"></i>${esc(l)}</span>`).join("")}</div>`;
 const refB=ns=>ns.map(n=>`<button class="r" data-ev="${n}" data-sid="">${n}</button>`).join("");
 
-function drawCharts(){$$("figure.fig[data-chart]").forEach(el=>{const k=el.dataset.chart;({grades:chGrades,countries:chCountry,jobs:chJobs,contact:chFreq,ai:chAI,pathways:chMap})[k](el);});
+function drawCharts(){$$("figure.fig[data-chart]").forEach(el=>{const k=el.dataset.chart;({grades:chGrades,countries:chCountry,jobs:chJobs,contact:chFreq,ai:chAI,ask:chAsk,pathways:chMap})[k](el);});
  $$("figure.fig .r").forEach(b=>{b.onmouseenter=()=>showTip(b);b.onmouseleave=hideTip;b.onclick=()=>openEvidence(+b.dataset.ev,null);});}
 function chGrades(el){
  const ev={A:0,B:0,C:0,D:0},se={A:0,B:0,C:0,D:0};EVIDENCE.forEach(e=>ev[e.grade]++);Object.values(SENT).forEach(s=>se[s.g]++);
@@ -2103,11 +2767,12 @@ function chGrades(el){
 function chCountry(el){
  const L=T("ctyL");
  // [label, stress, anger, ref]
- const D=[[L[0],50,18,10],[L[1],48,21,13],[L[2],46,15,11],[L[3],40,22,null],[L[4],39,19,8],[L[5],39,13,9],[L[6],38,13,12]];
+ // global averages are printed on every Gallup country page; cite the Korea page [8]
+ const D=[[L[0],50,18,10],[L[1],48,21,13],[L[2],46,15,11],[L[3],40,22,"g"],[L[4],39,19,8],[L[5],39,13,9],[L[6],38,13,12]];
  const W=680,rh=44,l=150,r=50,H=D.length*rh+30,Xs=v=>l+(W-l-r)*v/60;let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">`;
  [0,20,40,60].forEach(v=>s+=`<line class="${v===0?"ax":"grid"}" x1="${Xs(v)}" x2="${Xs(v)}" y1="4" y2="${H-22}"/><text class="tm" x="${Xs(v)}" y="${H-6}" text-anchor="middle">${v}%</text>`);
- D.forEach(([n,st,an,ref],i)=>{const y=6+i*rh,avg=ref===null;
-  s+=`<text class="tl" x="${l-10}" y="${y+20}" text-anchor="end"${avg?' font-style="italic"':''}>${esc(n)}${ref?` [${ref}]`:""}</text>`;
+ D.forEach(([n,st,an,ref],i)=>{const y=6+i*rh,avg=ref==="g";
+  s+=`<text class="tl" x="${l-10}" y="${y+20}" text-anchor="end"${avg?' font-style="italic"':''}>${esc(n)} [${avg?8:ref}]</text>`;
   s+=`<rect x="${Xs(0)}" y="${y+2}" width="${Xs(st)-Xs(0)}" height="16" rx="3" fill="var(--s2)" opacity="${avg?.55:1}" data-tip="${esc(n)} · ${esc(T("stL"))}: <b>${st}%</b>"/><text class="tv" x="${Xs(st)+5}" y="${y+15}">${st}</text>`;
   s+=`<rect x="${Xs(0)}" y="${y+20}" width="${Xs(an)-Xs(0)}" height="16" rx="3" fill="var(--s3)" opacity="${avg?.55:1}" data-tip="${esc(n)} · ${esc(T("anL"))}: <b>${an}%</b>"/><text class="tv" x="${Xs(an)+5}" y="${y+33}">${an}</text>`;});
  s+=`</svg>`;fig(el,T("c_cty"),T("c_ctyS"),refB([10,13,11,8,9,12]),s,leg([["var(--s2)",T("stL")],["var(--s3)",T("anL")]]));}
@@ -2153,6 +2818,19 @@ function chMap(el){
  s+=`<text class="tl" x="${(l+W-r)/2}" y="${H-10}" text-anchor="middle">${esc(T("mapX"))}</text><text class="tl" transform="translate(14 ${(t+H-b)/2}) rotate(-90)" text-anchor="middle">${esc(T("mapY"))}</text>`;
  P.forEach(([n,x,y,c,ref])=>{s+=`<circle cx="${Xs(x)}" cy="${Ys(y)}" r="9" fill="var(${c})" stroke="var(--surface)" stroke-width="2" data-tip="${esc(n)} [${ref}]"/><text class="tv" x="${Xs(x)+(x>.6?-14:14)}" y="${Ys(y)+4}" text-anchor="${x>.6?"end":"start"}">${esc(n)}</text>`;});
  s+=`</svg>`;fig(el,T("c_map"),T("c_mapS"),refB([29,33,32,30,34,39,23]),s);}
+function chAsk(el){
+ const H2=T("askH"),L=T("askL"),G=T("askG");
+ // [value %, group] in askL order; groups: 0 avoiding judgement, 1 efficiency/accuracy, 2 concealment
+ const V=[[31.3,0],[27.3,0],[6.9,0],[5.1,1],[42,1],[30,1],[28,1],[48,2],[57,2],[74.6,2]];
+ const C=["--s2","--s1","--s3"];
+ const rows=[["h",H2[0]],...[0,1,2,3].map(k=>["b",k]),["h",H2[1]],...[4,5,6].map(k=>["b",k]),["h",H2[2]],...[7,8,9].map(k=>["b",k])];
+ const W=700,rh=24,l=320,r=50,H=rows.length*rh+30,Xs=v=>l+(W-l-r)*v/80;let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">`;
+ [0,20,40,60,80].forEach(v=>s+=`<line class="${v===0?"ax":"grid"}" x1="${Xs(v)}" x2="${Xs(v)}" y1="4" y2="${H-22}"/><text class="tm" x="${Xs(v)}" y="${H-6}" text-anchor="middle">${v}%</text>`);
+ rows.forEach((rw,i)=>{const y=6+i*rh;
+  if(rw[0]==="h"){s+=`<text class="tl" x="6" y="${y+15}" font-weight="700">${esc(rw[1])}</text>`;return;}
+  const [v,g]=V[rw[1]],n=L[rw[1]];
+  s+=`<text class="tl" x="${l-10}" y="${y+14}" text-anchor="end">${esc(n)}</text><rect x="${Xs(0)}" y="${y+2}" width="${Xs(v)-Xs(0)}" height="16" rx="3" fill="var(${C[g]})" data-tip="${esc(n)}: <b>${v}%</b> · ${esc(G[g])}"/><text class="tv" x="${Xs(v)+5}" y="${y+14}">${v}</text>`;});
+ s+=`</svg>`;fig(el,T("c_ask"),T("c_askS"),refB([43,47,48,49]),s,leg(G.map((g,k)=>[`var(${C[k]})`,g])));}
 
 // ---------- MCMC widget ----------
 function mcmcShell(){const sl=(k,min,max,stp,h)=>`<div class="ctrl"><label>${T(k)}<output id="o-${k}"></output></label><input type="range" id="i-${k}" min="${min}" max="${max}" step="${stp}"><div class="hint">${h?esc(T(h)):""}</div></div>`;
